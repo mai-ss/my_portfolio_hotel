@@ -1,0 +1,1443 @@
+@charset "UTF-8";
+/*******************************************************
+    room food bathページ(room.html、food.html、bath.html)
+********************************************************/
+.room-main__concept, .food-main__concept, .bath-main__concept {
+  max-width: 1300px;
+  margin: 0 200px;
+}
+.room-main__concept--title, .food-main__concept--title, .bath-main__concept--title {
+  color: #333333;
+  letter-spacing: 2px;
+  margin: 30px 0 0;
+}
+.room-main__concept--text, .food-main__concept--text, .bath-main__concept--text {
+  line-height: 30px;
+  margin: 0px 0 80px;
+  padding: 20px 0;
+  font-size: 1.2rem;
+}
+.room-main__link li, .food-main__link li, .bath-main__link li {
+  padding: 5px;
+  text-align: left;
+}
+.room-main__link li a, .food-main__link li a, .bath-main__link li a {
+  cursor: pointer;
+  display: block;
+  width: 200px;
+  margin: 0 0 0 auto;
+  position: relative;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.room-main__link li a::after, .food-main__link li a::after, .bath-main__link li a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 10px;
+  left: 180px;
+  background-color: #333333;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.room-main__link li a:hover::after, .food-main__link li a:hover::after, .bath-main__link li a:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.room-main__link li a:hover, .food-main__link li a:hover, .bath-main__link li a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.room-main__room-list, .food-main__room-list, .bath-main__room-list {
+  max-width: 1300px;
+  margin: 80px 200px 80px 0;
+}
+.room-main__room-list--item, .food-main__room-list--item, .bath-main__room-list--item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 0;
+}
+.room-main__room-list--item--img, .food-main__room-list--item--img, .bath-main__room-list--item--img {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+}
+.room-main__room-list--item--img img, .food-main__room-list--item--img img, .bath-main__room-list--item--img img {
+  width: 100%;
+  height: 900px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.room-main__room-list--item--menu, .food-main__room-list--item--menu, .bath-main__room-list--item--menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 220px 15px;
+}
+.room-main__room-list--item--menu p, .food-main__room-list--item--menu p, .bath-main__room-list--item--menu p {
+  padding: 20px 0 30px;
+  font-size: 1.2rem;
+}
+.room-main__room-list--item--menu--reservation, .food-main__room-list--item--menu--reservation, .bath-main__room-list--item--menu--reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  text-align: center;
+}
+.room-main__room-list--item--menu--reservation a, .food-main__room-list--item--menu--reservation a, .bath-main__room-list--item--menu--reservation a {
+  padding: 10px 50px 10px 30px;
+  border: solid 1px #333333;
+  color: #333333;
+  position: relative;
+}
+.room-main__room-list--item--menu--reservation a::after, .food-main__room-list--item--menu--reservation a::after, .bath-main__room-list--item--menu--reservation a::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-top: -2.5px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease, -webkit-transform 0.3s ease;
+}
+.room-main__room-list--item--menu--reservation a:hover::after, .food-main__room-list--item--menu--reservation a:hover::after, .bath-main__room-list--item--menu--reservation a:hover::after {
+  right: 15px;
+  /* ホバー時に右へずらす */
+}
+.room-main__details, .food-main__details, .bath-main__details {
+  max-width: 1300px;
+  margin: 100px 200px;
+  padding-right: 200px;
+}
+.room-main__details h3, .food-main__details h3, .bath-main__details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.room-main__details--table th, .food-main__details--table th, .bath-main__details--table th {
+  width: 150px;
+  text-align: left;
+  padding: 15px;
+}
+.room-main__details--table td, .food-main__details--table td, .bath-main__details--table td {
+  padding: 15px;
+}
+.room-main__private, .food-main__private, .bath-main__private {
+  max-width: 1300px;
+  margin: 100px 200px 250px;
+  padding: 50px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-image: url("../img/footer-bg.png");
+}
+.room-main__private--text, .food-main__private--text, .bath-main__private--text {
+  color: #F5F5F3;
+  line-height: 2.3;
+}
+.room-main__private--reservation, .food-main__private--reservation, .bath-main__private--reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  text-align: center;
+}
+.room-main__private--reservation a, .food-main__private--reservation a, .bath-main__private--reservation a {
+  padding: 10px 50px 10px 30px;
+  border: solid 1px #333333;
+  color: #333333;
+  background-color: #F5F5F3;
+  position: relative;
+}
+.room-main__private--reservation a::after, .food-main__private--reservation a::after, .bath-main__private--reservation a::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-top: -2.5px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease, -webkit-transform 0.3s ease;
+}
+.room-main__private--reservation a:hover::after, .food-main__private--reservation a:hover::after, .bath-main__private--reservation a:hover::after {
+  right: 15px;
+  /* ホバー時に右へずらす */
+}
+
+.footer {
+  background-image: url("../img/footer-bg.png");
+  background-repeat: repeat-x;
+  max-width: 100vw;
+  height: 380px;
+}
+.footer__container {
+  color: #F5F5F3;
+  width: 1300px;
+  padding: 150px 0 0 200px;
+}
+.footer__container h2 {
+  padding: 10px 0;
+  letter-spacing: 1.6px;
+}
+.footer__container p {
+  padding: 5px 0;
+  letter-spacing: 1.6px;
+}
+
+.header.open .header__side {
+  opacity: 1;
+}
+.header.open .header__side--menu {
+  z-index: 100;
+}
+@media screen and (max-width: 480px) {
+  .header.open .header__side--menu {
+    width: 100%;
+  }
+}
+.header.open .header__side--img {
+  width: 70%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+@media screen and (max-width: 480px) {
+  .header.open .header__side--img {
+    width: 0%;
+  }
+}
+.header.open .header__side--img img {
+  display: inline;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header.open .header__side--img img #top-image {
+  position: relative;
+  z-index: 110;
+  display: inline;
+}
+
+.header {
+  position: relative;
+}
+.header__menu {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 30px auto;
+  position: fixed;
+  top: 0;
+  right: 80px;
+  color: #0d0d0c;
+  z-index: 1000;
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .header__menu {
+    right: 10px;
+  }
+}
+.header__menu span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  background: #F5F5F3;
+  border-radius: 5px;
+  left: 15%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-box-shadow: 0 1px 6px black;
+          box-shadow: 0 1px 6px black;
+}
+.header__menu span:nth-of-type(1) {
+  top: 13px;
+}
+.header__menu span:nth-of-type(2) {
+  top: 22px;
+}
+.header__menu span:nth-of-type(3) {
+  top: 31px;
+}
+.header__menu.active span:nth-of-type(1) {
+  top: 22px;
+  /* 真ん中に移動 */
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  /* 斜め左下に回転 */
+  background-color: #333333;
+}
+.header__menu.active span:nth-of-type(2) {
+  opacity: 0;
+  /* 非表示にする */
+}
+.header__menu.active span:nth-of-type(3) {
+  top: 22px;
+  /* 真ん中に移動 */
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* 斜め右下に回転 */
+  background-color: #333333;
+}
+.header__menu-room, .header__menu-bath, .header__menu-food {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 30px auto;
+  position: fixed;
+  top: 0;
+  right: 80px;
+  color: #0d0d0c;
+  z-index: 1000;
+  cursor: pointer;
+}
+.header__menu-room span, .header__menu-bath span, .header__menu-food span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  background: #333333;
+  border-radius: 5px;
+  left: 15%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.header__menu-room span:nth-of-type(1), .header__menu-bath span:nth-of-type(1), .header__menu-food span:nth-of-type(1) {
+  top: 13px;
+}
+.header__menu-room span:nth-of-type(2), .header__menu-bath span:nth-of-type(2), .header__menu-food span:nth-of-type(2) {
+  top: 22px;
+}
+.header__menu-room span:nth-of-type(3), .header__menu-bath span:nth-of-type(3), .header__menu-food span:nth-of-type(3) {
+  top: 31px;
+}
+.header__menu-room.active span:nth-of-type(1), .header__menu-bath.active span:nth-of-type(1), .header__menu-food.active span:nth-of-type(1) {
+  top: 22px;
+  /* 真ん中に移動 */
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  /* 斜め左下に回転 */
+  background-color: #333333;
+}
+.header__menu-room.active span:nth-of-type(2), .header__menu-bath.active span:nth-of-type(2), .header__menu-food.active span:nth-of-type(2) {
+  opacity: 0;
+  /* 非表示にする */
+}
+.header__menu-room.active span:nth-of-type(3), .header__menu-bath.active span:nth-of-type(3), .header__menu-food.active span:nth-of-type(3) {
+  top: 22px;
+  /* 真ん中に移動 */
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* 斜め右下に回転 */
+  background-color: #333333;
+}
+.header__menu-hotel_guide, .header__menu-access, .header__menu-news {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 30px auto;
+  position: fixed;
+  top: 0;
+  right: 80px;
+  color: #0d0d0c;
+  z-index: 1000;
+  cursor: pointer;
+}
+.header__menu-hotel_guide span, .header__menu-access span, .header__menu-news span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  background: #333333;
+  border-radius: 5px;
+  left: 15%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.header__menu-hotel_guide span:nth-of-type(1), .header__menu-access span:nth-of-type(1), .header__menu-news span:nth-of-type(1) {
+  top: 13px;
+}
+.header__menu-hotel_guide span:nth-of-type(2), .header__menu-access span:nth-of-type(2), .header__menu-news span:nth-of-type(2) {
+  top: 22px;
+}
+.header__menu-hotel_guide span:nth-of-type(3), .header__menu-access span:nth-of-type(3), .header__menu-news span:nth-of-type(3) {
+  top: 31px;
+}
+.header__menu-hotel_guide.active span:nth-of-type(1), .header__menu-access.active span:nth-of-type(1), .header__menu-news.active span:nth-of-type(1) {
+  top: 22px;
+  /* 真ん中に移動 */
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  /* 斜め左下に回転 */
+  background-color: #333333;
+}
+.header__menu-hotel_guide.active span:nth-of-type(2), .header__menu-access.active span:nth-of-type(2), .header__menu-news.active span:nth-of-type(2) {
+  opacity: 0;
+  /* 非表示にする */
+}
+.header__menu-hotel_guide.active span:nth-of-type(3), .header__menu-access.active span:nth-of-type(3), .header__menu-news.active span:nth-of-type(3) {
+  top: 22px;
+  /* 真ん中に移動 */
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  /* 斜め右下に回転 */
+  background-color: #333333;
+}
+.header__link {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  color: #F5F5F3;
+  text-shadow: #333333 1px 0 10px;
+  z-index: 10;
+}
+@media screen and (max-width: 480px) {
+  .header__link {
+    width: 70px;
+  }
+}
+.header__link h1 {
+  padding: 80px 20px;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .header__link h1 {
+    padding: 20px 10px;
+  }
+}
+.header__link h1 a {
+  color: #F5F5F3;
+}
+.header__link nav {
+  padding: 50px 20px;
+}
+@media screen and (max-width: 480px) {
+  .header__link nav {
+    display: none;
+  }
+}
+.header__link nav ul li {
+  text-align: center;
+  padding-top: 30px;
+}
+.header__link nav a {
+  color: inherit;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+.header__link nav a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #F5F5F3;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link nav a:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__link p {
+  text-align: center;
+  margin: 80px 0 80px;
+}
+@media screen and (max-width: 480px) {
+  .header__link p {
+    display: none;
+  }
+}
+.header__link p a {
+  color: #F5F5F3;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  display: inline-block;
+}
+.header__link p a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.header__link-room, .header__link-food, .header__link-bath, .header__link-access, .header__link-news {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  z-index: 10;
+  color: #333333;
+  text-shadow: #F5F5F3 1px 0 10px;
+}
+.header__link-room h1, .header__link-food h1, .header__link-bath h1, .header__link-access h1, .header__link-news h1 {
+  padding: 80px 20px;
+  text-align: center;
+}
+.header__link-room nav, .header__link-food nav, .header__link-bath nav, .header__link-access nav, .header__link-news nav {
+  padding: 50px 20px;
+}
+.header__link-room nav ul li, .header__link-food nav ul li, .header__link-bath nav ul li, .header__link-access nav ul li, .header__link-news nav ul li {
+  text-align: center;
+  padding-top: 30px;
+}
+.header__link-room nav a, .header__link-food nav a, .header__link-bath nav a, .header__link-access nav a, .header__link-news nav a {
+  color: inherit;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+.header__link-room nav a::after, .header__link-food nav a::after, .header__link-bath nav a::after, .header__link-access nav a::after, .header__link-news nav a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #333333;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link-room nav a:hover::after, .header__link-food nav a:hover::after, .header__link-bath nav a:hover::after, .header__link-access nav a:hover::after, .header__link-news nav a:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__link-room p, .header__link-food p, .header__link-bath p, .header__link-access p, .header__link-news p {
+  text-align: center;
+  margin: 80px 0 80px;
+}
+.header__link-room p a, .header__link-food p a, .header__link-bath p a, .header__link-access p a, .header__link-news p a {
+  color: #333333;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  display: inline-block;
+}
+.header__link-room p a:hover, .header__link-food p a:hover, .header__link-bath p a:hover, .header__link-access p a:hover, .header__link-news p a:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.header__link-hotel_guide {
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  right: 0;
+  color: #333333;
+  z-index: 10;
+}
+.header__link-hotel_guide h1 {
+  padding: 80px 20px;
+  text-align: center;
+}
+.header__link-hotel_guide nav {
+  padding: 50px 20px;
+}
+.header__link-hotel_guide nav ul li {
+  text-align: center;
+  padding-top: 30px;
+}
+.header__link-hotel_guide nav a {
+  color: inherit;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  position: relative;
+  cursor: pointer;
+}
+.header__link-hotel_guide nav a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #333333;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link-hotel_guide nav a:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__link-hotel_guide p {
+  text-align: center;
+  padding: 80px 0 80px;
+  cursor: pointer;
+}
+.header__link-hotel_guide p a {
+  color: #333333;
+}
+.header__mainvisual--img img {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__mainvisual--img-room, .header__mainvisual--img-food, .header__mainvisual--img-bath {
+  width: calc(100% - 200px);
+}
+.header__mainvisual--img-room img, .header__mainvisual--img-food img, .header__mainvisual--img-bath img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__side {
+  opacity: 0;
+}
+.header__side--img {
+  width: 70%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+}
+@media screen and (max-width: 480px) {
+  .header__side--img {
+    width: 0%;
+  }
+}
+.header__side--img img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__side--img img #top-image {
+  display: none;
+}
+.header__side--menu {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #F5F5F3;
+  z-index: -110;
+}
+.header__side--menu h1 {
+  padding: 150px 20px 80px;
+  text-align: center;
+  color: #333333;
+}
+.header__side--menu nav {
+  padding: 50px 20px;
+}
+.header__side--menu nav ul li {
+  text-align: center;
+  padding-top: 30px;
+}
+.header__side--menu nav a {
+  color: #333333;
+  position: relative;
+}
+.header__side--menu nav a::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #333333;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__side--menu nav a:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__side--reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  text-align: center;
+}
+.header__side--reservation a {
+  padding: 10px 50px 10px 30px;
+  border: solid 1px #333333;
+  color: #333333;
+  position: relative;
+}
+.header__side--reservation a::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-top: -2.5px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease, -webkit-transform 0.3s ease;
+}
+.header__side--reservation a:hover::after {
+  right: 15px;
+  /* ホバー時に右へずらす */
+}
+.header__side--address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  text-align: center;
+  padding-top: 100px;
+}
+.header__container {
+  background-image: url("../img/footer-bg.png");
+  background-repeat: repeat-x;
+  max-width: 100vw;
+  height: 250px;
+}
+.header__container h1 {
+  color: #F5F5F3;
+  text-align: center;
+  padding: 100px 0;
+}
+
+/**************************************
+    Topページ(index.html)
+***************************************/
+.main {
+  position: relative;
+}
+.main__concept {
+  max-width: 1300px;
+  margin: 20px 200px;
+}
+@media screen and (max-width: 860px) {
+  .main__concept {
+    max-width: 600px;
+    margin: 40px auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main__concept {
+    max-width: 400px;
+    margin: 40px auto;
+  }
+}
+.main__concept--title {
+  position: absolute;
+  top: -300px;
+  left: 100px;
+  color: #F5F5F3;
+  letter-spacing: 2px;
+  -webkit-transition: top 0.3s ease;
+  transition: top 0.3s ease;
+}
+@media screen and (max-width: 480px) {
+  .main__concept--title {
+    position: static;
+    color: #333333;
+  }
+}
+.main__concept--text {
+  line-height: 30px;
+  margin: 120px 0;
+  padding: 60px 0;
+}
+@media screen and (max-width: 480px) {
+  .main__concept--text {
+    margin: 20px auto;
+    padding: 0;
+    line-height: 20px;
+  }
+}
+.main__facility-info {
+  width: 1300px;
+  margin: 200px;
+}
+.main__facility-info h2 {
+  padding: 30px 0;
+}
+.main__facility-info--table th {
+  padding: 20px 10px;
+  text-align: left;
+}
+.main__facility-info--table td {
+  padding: 20px 0;
+}
+.main__room, .main__bath, .main__food {
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+.main__room--img img, .main__bath--img img, .main__food--img img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main__room--wrapper, .main__bath--wrapper, .main__food--wrapper {
+  max-width: 1300px;
+  margin: 150px 200px;
+}
+@media screen and (max-width: 860px) {
+  .main__room--wrapper, .main__bath--wrapper, .main__food--wrapper {
+    max-width: 600px;
+    margin: 40px auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main__room--wrapper, .main__bath--wrapper, .main__food--wrapper {
+    max-width: 400px;
+    margin: 40px auto;
+  }
+}
+.main__room--wrapper--title, .main__bath--wrapper--title, .main__food--wrapper--title {
+  position: relative;
+}
+.main__room--wrapper--title::before, .main__bath--wrapper--title::before, .main__food--wrapper--title::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  bottom: 15px;
+  left: -50px;
+  background-color: #333333;
+}
+.main__room--wrapper--text, .main__bath--wrapper--text, .main__food--wrapper--text {
+  margin: 50px 0;
+}
+@media screen and (max-width: 480px) {
+  .main__room--wrapper--text, .main__bath--wrapper--text, .main__food--wrapper--text {
+    margin: 20px 0;
+  }
+}
+.main__room--wrapper--reservation, .main__bath--wrapper--reservation, .main__food--wrapper--reservation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+  text-align: center;
+}
+@media screen and (max-width: 480px) {
+  .main__room--wrapper--reservation, .main__bath--wrapper--reservation, .main__food--wrapper--reservation {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+.main__room--wrapper--reservation a, .main__bath--wrapper--reservation a, .main__food--wrapper--reservation a {
+  padding: 10px 50px 10px 30px;
+  border: solid 1px #333333;
+  color: #333333;
+  position: relative;
+}
+.main__room--wrapper--reservation a::after, .main__bath--wrapper--reservation a::after, .main__food--wrapper--reservation a::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-top: -2.5px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease, -webkit-transform 0.3s ease;
+}
+@media screen and (max-width: 480px) {
+  .main__room--wrapper--reservation a::after, .main__bath--wrapper--reservation a::after, .main__food--wrapper--reservation a::after {
+    width: 7px;
+    height: 7px;
+    top: 15px;
+  }
+}
+.main__room--wrapper--reservation a:hover::after, .main__bath--wrapper--reservation a:hover::after, .main__food--wrapper--reservation a:hover::after {
+  right: 15px;
+  /* ホバー時に右へずらす */
+}
+.main__news {
+  max-width: 1300px;
+  margin: 0 200px;
+}
+@media screen and (max-width: 860px) {
+  .main__news {
+    max-width: 600px;
+    margin: 40px auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main__news {
+    max-width: 400px;
+    margin: 40px auto;
+  }
+}
+.main__news--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 50px;
+}
+.main__news--header--title {
+  position: relative;
+}
+.main__news--header--title::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  bottom: 15px;
+  left: -50px;
+  background-color: #333333;
+}
+.main__news--header--link {
+  color: #333333;
+  position: relative;
+  width: 130px;
+  text-align: end;
+}
+.main__news--header--link::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: left 0.3s ease, -webkit-transform 0.3s ease;
+  transition: left 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, left 0.3s ease;
+  transition: transform 0.3s ease, left 0.3s ease, -webkit-transform 0.3s ease;
+}
+@media screen and (max-width: 480px) {
+  .main__news--header--link::before {
+    width: 7px;
+    height: 7px;
+    top: 0;
+    left: 30px;
+  }
+}
+.main__news--header--link:hover::before {
+  left: 5px;
+}
+.main__news--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+@media screen and (max-width: 860px) {
+  .main__news--list {
+    display: block;
+  }
+}
+.main__news--list--item img {
+  width: 90%;
+  height: auto;
+}
+.main__news--list--item p {
+  color: #333333;
+  width: 90%;
+}
+.main__news--list--item:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: 0.3s ease, -webkit-transform 0.3s ease;
+  transition: 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, 0.3s ease;
+  transition: transform 0.3s ease, 0.3s ease, -webkit-transform 0.3s ease;
+}
+.main__reservation {
+  max-width: 1300px;
+  margin: 150px 200px;
+}
+@media screen and (max-width: 860px) {
+  .main__reservation {
+    max-width: 600px;
+    margin: 40px auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main__reservation {
+    max-width: 400px;
+    margin: 40px auto;
+  }
+}
+.main__reservation--title {
+  position: relative;
+}
+.main__reservation--title::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  position: absolute;
+  bottom: 15px;
+  left: -50px;
+  background-color: #333333;
+}
+.main__reservation--description {
+  font-size: 1.3rem;
+  padding: 20px 0 5px;
+}
+.main__reservation--note {
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+.main__reservation--phone {
+  font-size: 1.3rem;
+  margin: 20px o;
+  letter-spacing: 1.6px;
+}
+.main__reservation--button {
+  text-align: end;
+}
+.main__reservation--button a {
+  padding: 10px 50px 10px 30px;
+  border: solid 1px #333333;
+  color: #333333;
+  position: relative;
+}
+.main__reservation--button a::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  margin-top: -2.5px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease, -webkit-transform 0.3s ease;
+}
+.main__reservation--button a:hover::after {
+  right: 15px;
+  /* ホバー時に右へずらす */
+}
+.main__access {
+  max-width: 1300px;
+  margin: 150px 200px;
+}
+.main__access--title {
+  padding: 30px 0;
+}
+.main__access--ubtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+.main__access--map iframe {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+.main__access--details {
+  margin: 30px 0;
+  padding-bottom: 40px;
+}
+.main__access--details--title {
+  margin-bottom: 10px;
+}
+.main__access--details p {
+  font-size: 1.1rem;
+}
+.main__access--car, .main__access--public, .main__access--shuttle {
+  margin: 30px 0;
+  padding-bottom: 40px;
+}
+.main__access--car h4, .main__access--public h4, .main__access--shuttle h4 {
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+.main__access--car ul,
+.main__access--car ol, .main__access--public ul,
+.main__access--public ol, .main__access--shuttle ul,
+.main__access--shuttle ol {
+  list-style: none;
+  padding-left: 20px;
+  margin: 10px 0;
+}
+.main__access--car ul li,
+.main__access--car ol li, .main__access--public ul li,
+.main__access--public ol li, .main__access--shuttle ul li,
+.main__access--shuttle ol li {
+  margin-bottom: 5px;
+}
+.main__access--car ol, .main__access--public ol, .main__access--shuttle ol {
+  list-style: decimal;
+}
+.main__access--car ul li, .main__access--public ul li, .main__access--shuttle ul li {
+  margin-bottom: 10px;
+}
+.main__access--car p, .main__access--public p, .main__access--shuttle p {
+  padding: 30px 0;
+  font-size: 1.1rem;
+}
+.main__access--shuttle p {
+  padding: 5px 0;
+}
+
+/**************************************
+    お知らせページ(news.html)
+***************************************/
+.news {
+  max-width: 1300px;
+  margin: 150px 200px;
+  position: relative;
+  z-index: 10;
+}
+.news__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.news__filter-select, .news__filter-label {
+  all: revert;
+  background-color: #fff;
+  cursor: pointer;
+}
+.news__filter-select, .news__filter-label {
+  font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro", "ヒラギノ明朝 ProN", "MS P明朝", serif;
+}
+.news-list {
+  list-style: none;
+  /* リストマークを削除 */
+  padding: 20px 0;
+  margin: 30px 0;
+}
+.news-list__item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+.news-list__item:first-child {
+  border-top: 1px solid #ccc;
+  padding-top: 30px;
+}
+.news-list__link {
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+.news-list__link::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  margin-top: -2.5px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease, -webkit-transform 0.3s ease;
+}
+.news-list__link:hover::after {
+  right: 15px;
+  /* ホバー時に右へずらす */
+}
+.news-list__link:hover {
+  text-decoration: underline;
+}
+.news-list__date {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 5px;
+}
+.news-list__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+.news-list__excerpt {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/********************************************
+    おしらせ個別ページの内容(newsーdetail.html)
+********************************************/
+.news-detail__title {
+  margin-bottom: 20px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 0;
+}
+.news-detail__title h4 {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+.news-detail__body {
+  margin: 50px 0 200px;
+}
+.news-detail__body p {
+  padding: 40px 0;
+  font-size: 1.2rem;
+}
+.news-detail__navigation {
+  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.news-detail__navigation a {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.news-detail__navigation a:hover {
+  color: #666;
+}
+.news-detail__navigation a:first-child {
+  position: relative;
+}
+.news-detail__navigation a:first-child::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 8px;
+  left: -30px;
+  border-top: 1px solid #333333;
+  border-left: 1px solid #333333;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: left 0.3s ease, -webkit-transform 0.3s ease;
+  transition: left 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, left 0.3s ease;
+  transition: transform 0.3s ease, left 0.3s ease, -webkit-transform 0.3s ease;
+}
+.news-detail__navigation a:first-child:hover::after {
+  left: -40px;
+}
+.news-detail__navigation a:last-child {
+  position: relative;
+}
+.news-detail__navigation a:last-child::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 8px;
+  right: -30px;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: right 0.3s ease, -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease;
+  transition: transform 0.3s ease, right 0.3s ease, -webkit-transform 0.3s ease;
+}
+.news-detail__navigation a:last-child:hover::after {
+  right: -40px;
+}
+
+/********************************************
+    サンクスページ(thanks-page.html)
+********************************************/
+.thanks__container {
+  max-width: 1300px;
+  margin: 150px auto;
+}
+.thanks__message {
+  line-height: 50px;
+  font-size: 1.2rem;
+}
+.thanks__contact {
+  padding: 50px 0;
+}
+.thanks a {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
+}
+.thanks a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #666;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.thanks a:hover {
+  color: #666;
+}
+.thanks a:hover::after {
+  width: 100%;
+}
+
+/**************************************
+    共通
+***************************************/
+body {
+  background-color: #F5F5F3;
+  color: #333333;
+  font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro", " ヒラギノ明朝 Pro", "  MS P明朝", "MS P明朝", serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333333;
+}
+
+@media screen and (max-width: 860px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 0.8rem;
+  }
+  h3 {
+    font-size: 0.6rem;
+  }
+  h4 {
+    font-size: 0.5rem;
+  }
+  p {
+    font-size: 0.5rem;
+  }
+  a {
+    font-size: 0.5rem;
+  }
+}/*# sourceMappingURL=style.css.map */

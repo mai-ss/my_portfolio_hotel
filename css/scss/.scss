@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+@use 'mixin';
+@use "room/contents";
+@use "common/footer";
+@use "common/header";
+@use "top";
+
+
+/**************************************
+    共通
+***************************************/
+body {
+    background-color: #F5F5F3;
+    color: #333333;
+    font-family: "游明朝体", "游明朝", YuMincho, "ヒラギノ明朝 Pro", " ヒラギノ明朝 Pro", "  MS P明朝", "MS P明朝", serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+
+
+// ********************************
+//         メディアクエリ
+// ********************************
+@include mixin.tab {
+    h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      h4 {
+        font-size: 0.9rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+
+}
+
+@include mixin.sp {
+    h1 {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 0.8rem;
+      }
+      h3 {
+        font-size: 0.6rem;
+      }
+      h4 {
+        font-size: 0.5rem;
+      }
+      p {
+        font-size: 0.5rem;
+      }
+      a{
+        font-size: 0.5rem;
+      }
+}

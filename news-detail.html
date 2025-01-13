@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>光華亭</title>
+    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__menu-news">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header__link-news">
+            <h1>
+                <a href="index.html">光華亭</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
+                    <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
+                    <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
+                    <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
+                    <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
+                </ul>
+            </nav>
+            <p>
+                <a href="">予約</a>
+            </p>
+        </div>
+        <div class="header__side" id="__remove-transition">
+            <div class="header__side--img">
+                <img src="img/mv_01.jpg" alt="トップ画像" id="top-image">
+                <img src="img/mv_02.jpg" alt="お部屋" data-id="room1">
+                <img src="img/mv_03.jpg" alt="お風呂" data-id="bath">
+                <img src="img/mv_04.jpg" alt="お料理" data-id="food">
+                <img src="img/mv_05.jpg" alt="館内紹介" data-id="hotel_guide">
+                <img src="img/mv_06.jpg" alt="アクセス" data-id="access">
+            </div>
+            <div class="header__side--menu">
+                <div class="header__side--link">
+                    <h1>光華亭</h1>
+                    <nav>
+                        <ul>
+                            <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
+                            <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
+                            <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
+                            <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
+                            <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__side--reservation">
+                        <a href="">ご予約はこちら</a>
+                    </div>
+                    <address class="header__side--address">
+                        <p>〒390-1521 長野県松本市美ヶ原高原1234-5<br>
+                            TEL:0263-87-0011 / FAX:0263-87-0012</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="news">
+        <h3>お知らせ</h3>
+        <div class="news__filter">
+            <span>カテゴリー</span>
+            <select class="news__filter-select">
+                <option value="" selected>カテゴリーを選択</option>
+                <option value="news.html">全てを見る</option>
+                <option value="news-detail.html">お知らせ</option>
+            </select>
+            <span>アーカイブ</span>
+            <select class="news__filter-label">
+                <option value="" selected>月を選択</option>
+                <option value="">2024.10</option>
+                <option value="">2024.6</option>
+                <option value="">2024.5</option>
+            </select>
+        </div>
+        <div class="news-detail">
+            <div class="news-detail__title">
+                <p>2024.10.1</p>
+                <h4>年末年始の営業について</h4>
+            </div>
+            <div class="news-detail__body">
+                <p>年末年始は下記のスケジュールで営業いたします。</p>
+                <p>- 12月30日～1月3日: 通常営業<br>
+                - 1月4日: 臨時休館</p>
+                <p>ご予約や詳細についてはお問い合わせください。</p>
+            </div>
+            <div class="news-detail__navigation">
+                <a href="">前の記事</a>
+                <a href="">一覧に戻る</a>
+                <a href="">次の記事</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <h2>光華亭</h2>
+            <p>〒390-1521 長野県松本市美ヶ原高原1234-5</p>
+            <p>TEL:0123-45-6789/ FAX:0123-45-6788</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/menu-btn.js"></script>
+    <script src="js/hover-image.js"></script>
+    <script src="js/scroll.js"></script>
+</body>
