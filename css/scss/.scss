@@ -1,11 +1,10 @@
 @charset "UTF-8";
 
 @use 'mixin';
-@use "room/contents";
-@use "common/footer";
+@use "common/contents";
 @use "common/header";
-@use "top";
-
+@use "common/top";
+@use "common/footer";
 
 /**************************************
     共通
