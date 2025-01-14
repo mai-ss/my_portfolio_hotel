@@ -118,6 +118,9 @@
             color: #0d0d0c;
             z-index: 1000;
             cursor: pointer;
+            @include sp {
+                right: 10px;
+            }
 
             span {
                 display: block;
@@ -179,6 +182,9 @@
             color: #0d0d0c;
             z-index: 1000;
             cursor: pointer;
+            @include sp {
+                right: 10px;
+            }
 
             span {
                 display: block;
@@ -329,14 +335,23 @@
             z-index: 10;
             color: #333333;
             text-shadow: #F5F5F3 1px 0 10px;
+            @include sp {
+                width: 70px;
+            }
 
             h1 {
                 padding: 80px 20px;
                 text-align: center;
+                @include sp {
+                    padding: 20px 10px;
+                }
             }
 
             nav {
                 padding: 50px 20px;
+                @include sp {
+                    display: none;
+                }
 
                 ul li {
                     text-align: center;
@@ -373,6 +388,9 @@
             p {
                 text-align: center;
                 margin: 80px 0 80px;
+                @include sp {
+                    display: none;
+                }
 
                 a {
                     color: #333333;
@@ -397,14 +415,24 @@
             right: 0;
             color: #333333;
             z-index: 10;
+            @include sp {
+                width: 70px;
+            }
+
 
             h1 {
                 padding: 80px 20px;
                 text-align: center;
+                @include sp {
+                    padding: 20px 10px;
+                }
             }
 
             nav {
                 padding: 50px 20px;
+                @include sp {
+                    display: none;
+                }
 
                 ul li {
                     text-align: center;
@@ -442,6 +470,9 @@
                 text-align: center;
                 padding: 80px 0 80px;
                 cursor: pointer;
+                @include sp {
+                    display: none;
+                }
 
                 a {
                     color: #333333;
@@ -465,6 +496,9 @@
         &-food,
         &-bath {
             width: calc(100% - 200px);
+            @include sp {
+                width: 100%;
+            }
 
             img {
                 width: 100%;
@@ -513,6 +547,9 @@
                 padding: 150px 20px 80px;
                 text-align: center;
                 color: #333333;
+                @include tab{
+                   padding: 150px 20px 20px;
+                }  
                 a{
                     @include tab{
                      font-size: 2.5rem;
@@ -523,6 +560,9 @@
 
             nav {
                 padding: 50px 20px;
+                @include tab{
+                    padding: 20px;
+                 }  
 
                 ul li {
                     text-align: center;
