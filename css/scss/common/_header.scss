@@ -7,7 +7,7 @@
     &--menu {
         z-index: 100;
 
-        @include sp {
+        @include tab {
             width: 100%;
         }
 
@@ -20,7 +20,7 @@
         top: 0;
         left: 0;
         z-index: 100;
-        @include sp {
+        @include tab {
             width: 0%;
         }
 
@@ -513,6 +513,12 @@
                 padding: 150px 20px 80px;
                 text-align: center;
                 color: #333333;
+                a{
+                    @include tab{
+                     font-size: 2.5rem;
+                 }  
+                }
+               
             }
 
             nav {
@@ -528,6 +534,9 @@
                     position: relative;
                     // transition: all .3s ease 0s;
                     // display: inline-block;
+                    @include tab{
+                        font-size: 1.2rem;
+                    }
 
 
                     &::after {
@@ -583,6 +592,9 @@
                     border-right: 1px solid #333333;
                     transform: rotate(45deg);
                     transition: transform 0.3s ease, right 0.3s ease;
+                    @include tab{
+                        font-size: 1.2rem;
+                    }
                 }
 
                 &:hover::after {
