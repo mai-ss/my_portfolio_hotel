@@ -13,3 +13,17 @@ $(document).ready(function () {
 
     );
 });
+
+
+
+$(document).ready(function () {
+    // 各リンクのhoverイベントを設定
+    $(".header__mainvisual--img-select img").hover(
+        function () {
+            // 対応する画像を表示
+            const imgId = $(this).data("img");
+            $(".header__mainvisual--img-food img").hide();
+                $(`.header__mainvisual--img-food img[data-id="${imgId}"]`).fadeIn(500); // 対象画像を表示
+        });
+    }
+);

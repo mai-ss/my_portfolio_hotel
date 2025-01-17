@@ -132,6 +132,9 @@
                         border: solid 1px #333333;
                         color: #333333;
                         position: relative;
+                        &:hover{
+                            color: #666;
+                        }
 
                         &::after {
                             content: "";
@@ -232,6 +235,10 @@
                 color: #333333;
                 background-color: #F5F5F3;
                 position: relative;
+                &:hover{
+                    color: #666;
+                }
+
 
                 &::after {
                     content: "";

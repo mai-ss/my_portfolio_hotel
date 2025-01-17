@@ -148,6 +148,9 @@
   color: #333333;
   position: relative;
 }
+.room-main__room-list--item--menu--reservation a:hover, .food-main__room-list--item--menu--reservation a:hover, .bath-main__room-list--item--menu--reservation a:hover {
+  color: #666;
+}
 .room-main__room-list--item--menu--reservation a::after, .food-main__room-list--item--menu--reservation a::after, .bath-main__room-list--item--menu--reservation a::after {
   content: "";
   display: block;
@@ -262,6 +265,9 @@
   background-color: #F5F5F3;
   position: relative;
 }
+.room-main__private--reservation a:hover, .food-main__private--reservation a:hover, .bath-main__private--reservation a:hover {
+  color: #666;
+}
 .room-main__private--reservation a::after, .food-main__private--reservation a::after, .bath-main__private--reservation a::after {
   content: "";
   display: block;
@@ -283,53 +289,6 @@
 .room-main__private--reservation a:hover::after, .food-main__private--reservation a:hover::after, .bath-main__private--reservation a:hover::after {
   right: 15px;
   /* ホバー時に右へずらす */
-}
-
-.footer {
-  background-image: url("../img/footer-bg.png");
-  background-repeat: repeat-x;
-  max-width: 100vw;
-  height: 380px;
-}
-@media screen and (max-width: 860px) {
-  .footer {
-    height: 200px;
-  }
-}
-.footer__container {
-  color: #F5F5F3;
-  max-width: 1300px;
-  padding: 150px 0 0 200px;
-}
-@media screen and (max-width: 860px) and (max-width: 860px) {
-  .footer__container {
-    max-width: 600px;
-    padding: 70px 10px 0;
-  }
-}
-@media screen and (max-width: 860px) and (max-width: 480px) {
-  .footer__container {
-    max-width: 400px;
-    padding: 70px 10px 0px;
-  }
-}
-.footer__container h2 {
-  padding: 10px 0;
-  letter-spacing: 1.6px;
-}
-@media screen and (max-width: 860px) {
-  .footer__container h2 {
-    text-align: end;
-  }
-}
-.footer__container p {
-  padding: 5px 0;
-  letter-spacing: 1.6px;
-}
-@media screen and (max-width: 860px) {
-  .footer__container p {
-    text-align: end;
-  }
 }
 
 .header.open .header__side {
@@ -380,7 +339,7 @@
   position: fixed;
   top: 0;
   right: 80px;
-  color: #0d0d0c;
+  color: #333333;
   z-index: 1000;
   cursor: pointer;
 }
@@ -399,8 +358,8 @@
   left: 15%;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  -webkit-box-shadow: 0 1px 6px black;
-          box-shadow: 0 1px 6px black;
+  -webkit-box-shadow: 0 1px 6px #333333;
+          box-shadow: 0 1px 6px #333333;
 }
 .header__menu span:nth-of-type(1) {
   top: 13px;
@@ -439,7 +398,7 @@
   position: fixed;
   top: 0;
   right: 80px;
-  color: #0d0d0c;
+  color: #333333;
   z-index: 1000;
   cursor: pointer;
 }
@@ -572,6 +531,12 @@
 .header__link h1 a {
   color: #F5F5F3;
 }
+.header__link h1 a.background--light {
+  color: #333333;
+}
+.header__link h1 a.background--dark {
+  color: #F5F5F3;
+}
 .header__link nav {
   padding: 50px 20px;
 }
@@ -612,6 +577,9 @@
   text-align: center;
   margin: 80px 0 80px;
 }
+.header__link p:hover {
+  color: #666;
+}
 @media screen and (max-width: 480px) {
   .header__link p {
     display: none;
@@ -648,6 +616,9 @@
   padding: 80px 20px;
   text-align: center;
 }
+.header__link-room h1:hover, .header__link-food h1:hover, .header__link-bath h1:hover, .header__link-access h1:hover, .header__link-news h1:hover {
+  color: #666;
+}
 @media screen and (max-width: 480px) {
   .header__link-room h1, .header__link-food h1, .header__link-bath h1, .header__link-access h1, .header__link-news h1 {
     padding: 20px 10px;
@@ -671,6 +642,9 @@
   transition: color 0.3s;
   position: relative;
   cursor: pointer;
+}
+.header__link-room nav a:hover, .header__link-food nav a:hover, .header__link-bath nav a:hover, .header__link-access nav a:hover, .header__link-news nav a:hover {
+  color: #666;
 }
 .header__link-room nav a::after, .header__link-food nav a::after, .header__link-bath nav a::after, .header__link-access nav a::after, .header__link-news nav a::after {
   content: "";
@@ -707,6 +681,9 @@
   display: inline-block;
 }
 .header__link-room p a:hover, .header__link-food p a:hover, .header__link-bath p a:hover, .header__link-access p a:hover, .header__link-news p a:hover {
+  color: #666;
+}
+.header__link-room p a:hover, .header__link-food p a:hover, .header__link-bath p a:hover, .header__link-access p a:hover, .header__link-news p a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -727,6 +704,9 @@
 .header__link-hotel_guide h1 {
   padding: 80px 20px;
   text-align: center;
+}
+.header__link-hotel_guide h1:hover {
+  color: #666;
 }
 @media screen and (max-width: 480px) {
   .header__link-hotel_guide h1 {
@@ -751,6 +731,9 @@
   transition: color 0.3s;
   position: relative;
   cursor: pointer;
+}
+.header__link-hotel_guide nav a:hover {
+  color: #666;
 }
 .header__link-hotel_guide nav a::after {
   content: "";
@@ -788,19 +771,63 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.header__mainvisual--img-room, .header__mainvisual--img-food, .header__mainvisual--img-bath {
+.header__mainvisual--img-room, .header__mainvisual--img-bath {
   width: calc(100% - 200px);
 }
 @media screen and (max-width: 480px) {
-  .header__mainvisual--img-room, .header__mainvisual--img-food, .header__mainvisual--img-bath {
+  .header__mainvisual--img-room, .header__mainvisual--img-bath {
     width: 100%;
   }
 }
-.header__mainvisual--img-room img, .header__mainvisual--img-food img, .header__mainvisual--img-bath img {
+.header__mainvisual--img-room img, .header__mainvisual--img-bath img {
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.header__mainvisual--img-food {
+  width: calc(100% - 200px);
+  height: calc(100vh - 250px);
+}
+@media screen and (max-width: 480px) {
+  .header__mainvisual--img-food {
+    width: 100%;
+  }
+}
+.header__mainvisual--img-food img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header__mainvisual--img-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: calc(100% - 200px);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+@media screen and (max-width: 480px) {
+  .header__mainvisual--img-select {
+    display: none;
+  }
+}
+.header__mainvisual--img-select img {
+  max-width: 350px;
+  max-height: 250px;
+  padding-left: 10px;
+  padding-top: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+.header__mainvisual--img-select img:hover {
+  opacity: 0.7;
 }
 .header__side {
   opacity: 0;
@@ -837,7 +864,7 @@
   z-index: -110;
 }
 .header__side--menu h1 {
-  padding: 150px 20px 80px;
+  padding: 150px 20px 60px;
   text-align: center;
   color: #333333;
 }
@@ -852,7 +879,7 @@
   }
 }
 .header__side--menu nav {
-  padding: 50px 20px;
+  padding: 30px 20px;
 }
 @media screen and (max-width: 860px) {
   .header__side--menu nav {
@@ -866,6 +893,9 @@
 .header__side--menu nav a {
   color: #333333;
   position: relative;
+}
+.header__side--menu nav a:hover {
+  color: #666;
 }
 @media screen and (max-width: 860px) {
   .header__side--menu nav a {
@@ -907,6 +937,9 @@
   border: solid 1px #333333;
   color: #333333;
   position: relative;
+}
+.header__side--reservation a:hover {
+  color: #666;
 }
 .header__side--reservation a::after {
   content: "";
@@ -993,7 +1026,7 @@
   position: absolute;
   top: -300px;
   left: 100px;
-  color: #F5F5F3;
+  color: #0d0d06;
   letter-spacing: 2px;
   -webkit-transition: top 0.3s ease;
   transition: top 0.3s ease;
@@ -1114,6 +1147,9 @@
   color: #333333;
   position: relative;
 }
+.main__room--wrapper--reservation a:hover, .main__bath--wrapper--reservation a:hover, .main__food--wrapper--reservation a:hover {
+  color: #666;
+}
 .main__room--wrapper--reservation a::after, .main__bath--wrapper--reservation a::after, .main__food--wrapper--reservation a::after {
   content: "";
   display: block;
@@ -1192,6 +1228,9 @@
   width: 130px;
   text-align: end;
 }
+.main__news--header--link:hover {
+  color: #666;
+}
 @media screen and (max-width: 480px) {
   .main__news--header--link {
     width: 100px;
@@ -1242,6 +1281,9 @@
 .main__news--list--item img {
   width: 90%;
   height: auto;
+}
+.main__news--list--item img:hover {
+  opacity: 0.7;
 }
 @media screen and (max-width: 480px) {
   .main__news--list--item img {
@@ -1325,7 +1367,6 @@
 }
 @media screen and (max-width: 480px) {
   .main__reservation--button {
-    text-align: start;
     margin: 20px 0px;
   }
 }
@@ -1334,6 +1375,9 @@
   border: solid 1px #333333;
   color: #333333;
   position: relative;
+}
+.main__reservation--button a:hover {
+  color: #666;
 }
 .main__reservation--button a::after {
   content: "";
@@ -1653,6 +1697,53 @@
 }
 .thanks a:hover::after {
   width: 100%;
+}
+
+.footer {
+  background-image: url("../img/footer-bg.png");
+  background-repeat: repeat-x;
+  max-width: 100vw;
+  height: 380px;
+}
+@media screen and (max-width: 860px) {
+  .footer {
+    height: 200px;
+  }
+}
+.footer__container {
+  color: #F5F5F3;
+  max-width: 1300px;
+  padding: 150px 0 0 200px;
+}
+@media screen and (max-width: 860px) and (max-width: 860px) {
+  .footer__container {
+    max-width: 600px;
+    padding: 70px 10px 0;
+  }
+}
+@media screen and (max-width: 860px) and (max-width: 480px) {
+  .footer__container {
+    max-width: 400px;
+    padding: 70px 10px 0px;
+  }
+}
+.footer__container h2 {
+  padding: 10px 0;
+  letter-spacing: 1.6px;
+}
+@media screen and (max-width: 860px) {
+  .footer__container h2 {
+    text-align: end;
+  }
+}
+.footer__container p {
+  padding: 5px 0;
+  letter-spacing: 1.6px;
+}
+@media screen and (max-width: 860px) {
+  .footer__container p {
+    text-align: end;
+  }
 }
 
 /**************************************
