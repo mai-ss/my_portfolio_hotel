@@ -61,7 +61,7 @@
         }
 
 
-        span {
+        span.white {
             display: block;
             position: absolute;
             height: 2px;
@@ -70,7 +70,7 @@
             border-radius: 5px;
             left: 15%;
             transition: all 0.4s ease;
-            box-shadow: 0 1px 6px(#333333);
+            // box-shadow: 0 1px 6px(#333333);
 
             &:nth-of-type(1) {
                 top: 13px;
@@ -82,6 +82,34 @@
 
             &:nth-of-type(3) {
                 top: 31px;
+            }
+        }
+
+        span.black {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 70%;
+            background: #333333;
+            border-radius: 5px;
+            left: 15%;
+            transition: all 0.4s ease;
+            // box-shadow: 0 1px 6px(#333333);
+
+            &:nth-of-type(1) {
+                top: 13px;
+            }
+
+            &:nth-of-type(2) {
+                top: 22px;
+            }
+
+            &:nth-of-type(3) {
+                top: 31px;
+            }
+
+            .white {
+                background-color: #F5F5F3!important;
             }
         }
 
@@ -247,8 +275,20 @@
         top: 70px;
         right: 0;
         color: #F5F5F3;
-        text-shadow: #333333 1px 0 10px;
+        // text-shadow: #333333 1px 0 10px;
         z-index: 10;
+
+        .black {
+            color: #333333;
+        }
+        
+        .white {
+            color: #F5F5F3;
+        }
+
+        a {
+            color: #F5F5F3;
+        }
 
 
         @include sp {
@@ -259,24 +299,13 @@
             padding: 80px 20px;
             text-align: center;
 
+            a {
+                transition: color 0.3s;
+            }
+
             @include sp {
                 padding: 20px 10px;
             }
-
-
-            a {
-                color: #F5F5F3;
-
-                &.background--light {
-                    color: #333333;
-                }
-
-                &.background--dark {
-                    color: #F5F5F3;
-                }
-
-            }
-
 
         }
 
@@ -294,7 +323,7 @@
 
             a {
                 color: inherit;
-                transition: color 0.3s;
+                transition: color 0.3s ease;
                 position: relative;
                 cursor: pointer;
 
@@ -395,10 +424,18 @@
                 }
 
                 a {
-                    color: inherit;
+                    // color: inherit;
                     transition: color 0.3s;
                     position: relative;
                     cursor: pointer;
+
+                    .black {
+                        color: #333333!important;
+                    }
+                    
+                    .white {
+                        color: #F5F5F3!important;
+                    }
 
                     &:hover {
                         color: #666;
@@ -438,6 +475,14 @@
                     color: #333333;
                     transition: transform 0.3s ease;
                     display: inline-block;
+
+                    .black {
+                        color: #333333;
+                    }
+                    
+                    .white {
+                        color: #F5F5F3;
+                    }
 
                     &:hover {
                         color: #666;
