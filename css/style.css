@@ -176,7 +176,6 @@
 .room-main__details, .food-main__details, .bath-main__details {
   max-width: 1300px;
   margin: 100px 200px;
-  padding-right: 200px;
 }
 @media screen and (max-width: 860px) {
   .room-main__details, .food-main__details, .bath-main__details {
@@ -241,6 +240,19 @@
           justify-content: space-between;
   background-image: url("../img/footer-bg.png");
 }
+@media screen and (max-width: 860px) {
+  .room-main__private, .food-main__private, .bath-main__private {
+    max-width: 600px;
+    margin: 40px 200px 40px 30px;
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+  .room-main__private, .food-main__private, .bath-main__private {
+    max-width: 400px;
+    margin: 40px 70px 40px 20px;
+  }
+}
 .room-main__private--text, .food-main__private--text, .bath-main__private--text {
   color: #F5F5F3;
   line-height: 2.3;
@@ -251,7 +263,7 @@
   display: flex;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -603,6 +615,8 @@
 }
 .header__link p:hover {
   color: #666;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 @media screen and (max-width: 480px) {
   .header__link p {
@@ -717,8 +731,6 @@
 }
 .header__link-room p a:hover, .header__link-food p a:hover, .header__link-bath p a:hover, .header__link-access p a:hover, .header__link-news p a:hover {
   color: #666;
-}
-.header__link-room p a:hover, .header__link-food p a:hover, .header__link-bath p a:hover, .header__link-access p a:hover, .header__link-news p a:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -799,6 +811,15 @@
 }
 .header__link-hotel_guide p a {
   color: #333333;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.header__link-hotel_guide p a:hover {
+  color: #666;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .header__mainvisual--img img {
   width: 100vw;
