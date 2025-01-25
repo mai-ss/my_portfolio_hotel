@@ -6,10 +6,7 @@
     <title>光華亭</title>
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -21,15 +18,15 @@
         </div>
         <div class="header__link">
             <h1>
-                <a href="index.html">光華亭</a>
+                <a href="<?php echo esc_url( home_url() ); ?>" >光華亭</a>
             </h1>
             <nav>
                 <ul>
-                    <li><a id="__room1" href="room1.html">お部屋</a></li>
-                    <li><a id="__bath" href="bath.html">お風呂</a></li>
-                    <li><a id="__food" href="food.html">お料理</a></li>
-                    <li><a id="__hotel_guide" href="hotel_guide.html">館内紹介</a></li>
-                    <li><a id="__access" href="access.html">アクセス</a></li>
+                <li><a id="__room1" href="<?php echo esc_url( home_url( '/room1.html' ) ); ?>" data-img="room1">お部屋</a></li>
+<li><a id="__bath" href="<?php echo esc_url( home_url( '/bath.html' ) ); ?>" data-img="bath">お風呂</a></li>
+<li><a id="__food" href="<?php echo esc_url( home_url( '/food.html' ) ); ?>" data-img="food">お料理</a></li>
+<li><a id="__hotel_guide" href="<?php echo esc_url( home_url( '/hotel_guide.html' ) ); ?>" data-img="hotel_guide">館内紹介</a></li>
+<li><a id="__access" href="<?php echo esc_url( home_url( '/access.html' ) ); ?>" data-img="access">アクセス</a></li>
                 </ul>
             </nav>
             <p>
@@ -37,18 +34,18 @@
             </p>
         </div>
         <div class="header__mainvisual--img">
-            <img src="img/mv_01.jpg" alt="mainvisual">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_01.jpg'); ?>" alt="mainvisual">
         </div>
 
 
         <div class="header__side" id="__remove-transition">
             <div class="header__side--img">
-                <img src="img/mv_01.jpg" alt="トップ画像" id="top-image">
-                <img src="img/mv_02.jpg" alt="お部屋" data-id="room1">
-                <img src="img/mv_03.jpg" alt="お風呂" data-id="bath">
-                <img src="img/mv_04.jpg" alt="お料理" data-id="food">
-                <img src="img/mv_05.jpg" alt="館内紹介" data-id="hotel_guide">
-                <img src="img/mv_06.jpg" alt="アクセス" data-id="access">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_01.jpg'); ?>" alt="トップ画像" id="top-image">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_02.jpg'); ?>" alt="お部屋" data-id="room1">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_03.jpg'); ?>" alt="お風呂" data-id="bath">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_04.jpg'); ?>" alt="お料理" data-id="food">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_05.jpg'); ?>" alt="館内紹介" data-id="hotel_guide">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_06.jpg'); ?>" alt="アクセス" data-id="access">
             </div>
             <div class="header__side--menu">
                 <div class="header__side--link">
@@ -83,40 +80,40 @@
         </section>
         <section class="main__room">
             <div class="main__room--img">
-                <img src="img/room_01.jpg" alt="room">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/room_01.jpg'); ?>" alt="room">
             </div>
             <div class="main__room--wrapper">
                 <h3 class="main__room--wrapper--title">お部屋</h3>
                 <p class="main__room--wrapper--text">光華亭では、お客様一人ひとりが特別な時間を過ごせるよう、3種類の趣異なるお部屋をご用意しております。</p>
                 <div class="main__room--wrapper--reservation">
-                    <a href="">お部屋について</a>
+                    <a href="<?php echo esc_url( home_url( '/room1.html' ) ); ?>" >お部屋について</a>
                 </div>
             </div>
 
         </section>
         <section class="main__bath">
             <div class="main__bath--img">
-                <img src="img/bath_01.jpg" alt="bath">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/bath_01.jpg'); ?>" alt="bath">
             </div>
             <div class="main__bath--wrapper">
                 <h3 class="main__bath--wrapper--title">お風呂</h3>
                 <p class="main__bath--wrapper--text">光華亭では、四季折々の自然と調和したお風呂をご用意しております。
                     湯けむりとともに訪れる静寂と、身体の芯から温まる湯浴みが、心身の疲れをほどいてくれます。</p>
                 <div class="main__bath--wrapper--reservation">
-                    <a href="">お風呂について</a>
+                    <a href="<?php echo esc_url( home_url( '/bath.html' ) ); ?>" >お風呂について</a>
                 </div>
             </div>
         </section>
         <section class="main__food">
             <div class="main__food--img">
-                <img src="img/food_01.jpg" alt="food">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/food_01.jpg'); ?>" alt="food">
             </div>
             <div class="main__food--wrapper">
                 <h3 class="main__food--wrapper--title">お料理</h3>
                 <p class="main__food--wrapper--text">
                     料理長が厳選した旬の食材を使用した会席料理は、四季の移ろいを感じられる繊細な味わいが魅力です。地元の新鮮な海の幸や山の幸を活かした献立は、訪れるたびに新たな感動をお楽しみいただけます。</p>
                 <div class="main__food--wrapper--reservation">
-                    <a href="">お料理について</a>
+                    <a href="<?php echo esc_url( home_url( '/food.html' ) ); ?>" >お料理について</a>
                 </div>
             </div>
         </section>
@@ -127,15 +124,15 @@
             </div>
             <div class="main__news--list">
                 <a href="news-detail.html" class="main__news--list--item">
-                    <img src="img/mv_01.jpg" alt="">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_01.jpg'); ?>" alt="">
                     <p>Webサイトリニューアル</p>
                 </a>
                 <a href="news-detail.html" class="main__news--list--item">
-                    <img src="img/bath_02.jpg" alt="">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_02.jpg'); ?>" alt="">
                     <p>大浴場改修工事</p>
                 </a>
                 <a href="news-detail.html" class="main__news--list--item">
-                    <img src="img/mv_06.jpg" alt="">
+                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_06.jpg'); ?>" alt="">
                     <p>年末年始の営業について</p>
                 </a>
             </div>
@@ -160,6 +157,7 @@
             <p>TEL:0123-45-6789/ FAX:0123-45-6788</p>
         </div>
     </footer>
+    <?php wp_footer(); ?>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/menu-btn.js"></script>

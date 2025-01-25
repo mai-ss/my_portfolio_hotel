@@ -601,8 +601,7 @@
             object-fit: cover;
         }
 
-        // roomのページ用
-        &-room,
+        // bathのページ用
         &-bath {
             width: calc(100% - 200px);
 
@@ -617,8 +616,8 @@
             }
         }
 
-
-        &-food {
+// food,roomのページ用
+        &-food,&-room {
             width: calc(100% - 200px);
             height: calc(100vh - 250px);
             // overflow: hidden;
