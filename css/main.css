@@ -33,20 +33,11 @@
 .food-main__concept--title,
 .bath-main__concept--title {
   position: absolute;
-  top: -300px;
+  top: -40px;
   left: 100px;
-  color: #F5F5F3;
+  color: #333333;
   letter-spacing: 2px;
   margin: 15px 0 0;
-  -webkit-transition: top 0.3s ease;
-  transition: top 0.3s ease;
-}
-@media screen and (max-width: 860px) {
-  .room-main__concept--title,
-  .food-main__concept--title,
-  .bath-main__concept--title {
-    position: static;
-  }
 }
 .room-main__concept--text,
 .food-main__concept--text,
@@ -720,6 +711,40 @@
   width: 30px;
   opacity: 1;
 }
+.header__link nav a.white::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #F5F5F3;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link nav a.white:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__link nav a.black::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #333333;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link nav a.black:hover::after {
+  width: 30px;
+  opacity: 1;
+}
 .header__link p {
   text-align: center;
   margin: 80px 0 80px;
@@ -754,7 +779,6 @@
   right: 0;
   z-index: 10;
   color: #333333;
-  text-shadow: #F5F5F3 1px 0 10px;
 }
 @media screen and (max-width: 480px) {
   .header__link-room, .header__link-food, .header__link-bath, .header__link-access, .header__link-news {
@@ -800,6 +824,9 @@
 .header__link-room nav a:hover, .header__link-food nav a:hover, .header__link-bath nav a:hover, .header__link-access nav a:hover, .header__link-news nav a:hover {
   color: #666;
 }
+.header__link-room nav a.white:hover, .header__link-food nav a.white:hover, .header__link-bath nav a.white:hover, .header__link-access nav a.white:hover, .header__link-news nav a.white:hover {
+  color: #bbbbbb;
+}
 .header__link-room nav a::after, .header__link-food nav a::after, .header__link-bath nav a::after, .header__link-access nav a::after, .header__link-news nav a::after {
   content: "";
   display: block;
@@ -814,6 +841,40 @@
   opacity: 0;
 }
 .header__link-room nav a:hover::after, .header__link-food nav a:hover::after, .header__link-bath nav a:hover::after, .header__link-access nav a:hover::after, .header__link-news nav a:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__link-room nav a.white::after, .header__link-food nav a.white::after, .header__link-bath nav a.white::after, .header__link-access nav a.white::after, .header__link-news nav a.white::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #F5F5F3;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link-room nav a.white:hover::after, .header__link-food nav a.white:hover::after, .header__link-bath nav a.white:hover::after, .header__link-access nav a.white:hover::after, .header__link-news nav a.white:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__link-room nav a.black::after, .header__link-food nav a.black::after, .header__link-bath nav a.black::after, .header__link-access nav a.black::after, .header__link-news nav a.black::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #333333;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link-room nav a.black:hover::after, .header__link-food nav a.black:hover::after, .header__link-bath nav a.black:hover::after, .header__link-access nav a.black:hover::after, .header__link-news nav a.black:hover::after {
   width: 30px;
   opacity: 1;
 }
@@ -844,6 +905,17 @@
   color: #666;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+.header__link-room p a.white:hover, .header__link-food p a.white:hover, .header__link-bath p a.white:hover, .header__link-access p a.white:hover, .header__link-news p a.white:hover {
+  color: #bbbbbb;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.header__link-room .white, .header__link-food .white, .header__link-bath .white, .header__link-access .white, .header__link-news .white {
+  color: #F5F5F3;
+}
+.header__link-room .black, .header__link-food .black, .header__link-bath .black, .header__link-access .black, .header__link-news .black {
+  color: #333333;
 }
 .header__link-hotel_guide {
   width: 200px;
@@ -893,6 +965,9 @@
 .header__link-hotel_guide nav a:hover {
   color: #666;
 }
+.header__link-hotel_guide nav a.white:hover {
+  color: #bbbbbb;
+}
 .header__link-hotel_guide nav a::after {
   content: "";
   display: block;
@@ -907,6 +982,40 @@
   opacity: 0;
 }
 .header__link-hotel_guide nav a:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__link-hotel_guide nav a.white::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #F5F5F3;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link-hotel_guide nav a.white:hover::after {
+  width: 30px;
+  opacity: 1;
+}
+.header__link-hotel_guide nav a.black::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 1px;
+  position: absolute;
+  bottom: 5px;
+  left: 70px;
+  background-color: #333333;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  opacity: 0;
+}
+.header__link-hotel_guide nav a.black:hover::after {
   width: 30px;
   opacity: 1;
 }
@@ -931,6 +1040,17 @@
   color: #666;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+.header__link-hotel_guide p a.white:hover {
+  color: #bbbbbb;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.header__link-hotel_guide .white {
+  color: #F5F5F3;
+}
+.header__link-hotel_guide .black {
+  color: #333333;
 }
 .header__mainvisual--img img {
   width: 100vw;
@@ -1191,18 +1311,10 @@
 }
 .main__concept--title {
   position: absolute;
-  top: -300px;
+  top: 0;
   left: 100px;
-  color: #f5f5f5;
+  color: #333333;
   letter-spacing: 2px;
-  -webkit-transition: top 0.3s ease;
-  transition: top 0.3s ease;
-}
-@media screen and (max-width: 860px) {
-  .main__concept--title {
-    position: static;
-    color: #333333;
-  }
 }
 .main__concept--text {
   line-height: 30px;

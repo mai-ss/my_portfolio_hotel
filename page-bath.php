@@ -14,19 +14,19 @@
 
 <body>
     <header class="header">
-        <div class="header__menu-room">
+        <div class="header__menu-bath">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <div class="header__link-room">
+        <div class="header__link-bath" id="__background-check">
             <h1>
                 <a href="index.html">光華亭</a>
             </h1>
             <nav>
                 <ul>
                     <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
-                    <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
+                    <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></ßli>
                     <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
                     <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
                     <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
@@ -36,16 +36,8 @@
                 <a href="">予約</a>
             </p>
         </div>
-        <div class="header__mainvisual--img-room" data-default-img="room_02">
-            <img src="img/room_02.jpg" alt="mainvisual" data-id="room_02">
-            <img src="img/room_05.jpg" alt="mainvisual" data-id="room_05" style="display: none;">
-            <img src="img/room_06.jpg" alt="mainvisual" data-id="room_06" style="display: none;">
-            <img src="img/room_07.jpg" alt="mainvisual" data-id="room_07" style="display: none;">
-        </div>
-        <div class="header__mainvisual--img-select">
-            <img src="img/room_05.jpg" alt="room" data-img="room_05">
-            <img src="img/room_06.jpg" alt="room" data-img="room_06">
-            <img src="img/room_07.jpg" alt="room" data-img="room_07">
+        <div class="header__mainvisual--img-bath">
+            <img src="img/bath_01.jpg" alt="bath">
         </div>
         <div class="header__side" id="__remove-transition">
             <div class="header__side--img">
@@ -81,50 +73,41 @@
             </div>
         </div>
     </header>
-    <main class="room-main">
-        <section class="room-main__concept">
-            <h2 class="room-main__concept--title">朝霧スタンダードルーム</h2>
-            <p class="room-main__concept--text">光華亭の基本となるお部屋でありながら、落ち着きと温もりを兼ね備えた空間。<br>
-                清々しい朝の光が差し込むシンプルで心地よい設計が特徴です。</p>
-            <div class="room-main__room-list--item--menu--reservation">
-                <a href="">この部屋を予約する</a>
-            </div>
+    <main class="bath-main">
+        <section class="bath-main__concept">
+            <h2 class="bath-main__concept--title">お風呂</h2>
+            <p class="bath-main__concept--text">夜空に輝く満天の星を眺めながら、心地よい湯に包まれる贅沢なひととき。<br>
+                周囲を囲む木々と澄んだ空気が、都会の喧騒を忘れさせてくれます。<br>
+                昼は爽やかな光を浴びながら、夜は星空と月明かりの下で、季節の移ろいを感じられる開放的なお風呂です。</p>
         </section>
-        <section class="room-main__details">
-            <h3>お部屋の概要</h3>
-            <table class="room-main__details--table">
+        <section class="bath-main__details">
+            <h3>お風呂の概要</h3>
+            <table class="bath-main__details--table">
                 <tr>
-                    <th>客室タイプ</th>
-                    <td>朝霧スタンダードルーム</td>
+                    <th>泉質</th>
+                    <td>弱アルカリ性単純泉<br>肌にやさしく、保湿効果が高い湯質で「美肌の湯」として知られています。</td>
                 </tr>
                 <tr>
-                    <th>間取り</th>
-                    <td>和洋室（和室10畳、洋室8畳）</td>
+                    <th>適応症</th>
+                    <td>疲労回復、冷え性、肩こり、神経痛、リウマチ、慢性消化器病など</td>
                 </tr>
                 <tr>
-                    <th>定員</th>
-                    <td>2～8名</td>
-                </tr>
-                <tr>
-                    <th>客室内設備</th>
-                    <td>
-                        冷暖房/ツインベッド（和洋室）※2/開閉式露天風呂・シャワー/テラス/洗面所/洋式トイレ（ウォシュレット）/
-                        金庫/ドライヤー/冷蔵庫※3/湯沸しポット/お茶セット/32インチ液晶テレビ/衛星放送/インターネット接続（無線LAN）
-                    </td>
-                </tr>
-                <tr>
-                    <th>アメニティ</th>
-                    <td>
-                        シャンプー・リンス/ボディソープ/タオル・バスタオル※4/ハミガキセット/ドライヤー/浴衣
-                    </td>
-                </tr>
-                <tr>
-                    <th>お煙草</th>
-                    <td>お部屋は全室禁煙です。テラスでのみ喫煙できます。</td>
+                    <th>利用時間</th>
+                    <td>6:00～10:00 15:00～23:00</td>
                 </tr>
             </table>
         </section>
+        <section class="bath-main__private">
+            <div class="bath-main__private--text">
+                <p>お部屋にも専用露天風呂がございます。</p>
+                <p>どうぞ、自慢のお風呂をお好きな時間に、ゆったりと存分にお楽しみください。</p>
+            </div>
+            <div class="bath-main__private--reservation">
+                <a href="" class="bath-main__private--link">ご予約はこちら</a>
+            </div>
+        </section>
     </main>
+
     <footer class="footer">
         <div class="footer__container">
             <h2>光華亭</h2>
@@ -136,4 +119,6 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/menu-btn.js"></script>
     <script src="js/hover-image.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/footer-background-check.js"></script>
 </body>

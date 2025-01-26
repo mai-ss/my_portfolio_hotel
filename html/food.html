@@ -6,20 +6,20 @@
     <title>光華亭</title>
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 
 </head>
 
 <body>
     <header class="header">
-        <div class="header__menu-bath">
+        <div class="header__menu-food">
             <span></span>
             <span></span>
             <span></span>
         </div>
-        <div class="header__link-bath">
+        <div class="header__link-food" id="__background-check">
             <h1>
                 <a href="index.html">光華亭</a>
             </h1>
@@ -36,23 +36,26 @@
                 <a href="">予約</a>
             </p>
         </div>
-        <div class="header__mainvisual--img-bath">
-            <img src="img/bath_01.jpg" alt="bath">
+        <div class="header__mainvisual--img-food">
+            <img src="../img/food_01.jpg" alt="food" data-id="food_01">
+            <img src="../img/food_02.jpg" alt="food" data-id="food_02" style="display: none;">
+        </div>
+        <div class="header__mainvisual--img-select">
+            <img src="../img/food_01.jpg" alt="food" data-img="food_01">
+            <img src="../img/food_02.jpg" alt="food" data-img="food_02">
         </div>
         <div class="header__side" id="__remove-transition">
             <div class="header__side--img">
-                <img src="img/mv_01.jpg" alt="トップ画像" id="top-image">
-                <img src="img/mv_02.jpg" alt="お部屋" data-id="room1">
-                <img src="img/mv_03.jpg" alt="お風呂" data-id="bath">
-                <img src="img/mv_04.jpg" alt="お料理" data-id="food">
-                <img src="img/mv_05.jpg" alt="館内紹介" data-id="hotel_guide">
-                <img src="img/mv_06.jpg" alt="アクセス" data-id="access">
+                <img src="../img/mv_01.jpg" alt="トップ画像" id="top-image">
+                <img src="../img/mv_02.jpg" alt="お部屋" data-id="room1">
+                <img src="../img/mv_03.jpg" alt="お風呂" data-id="bath">
+                <img src="../img/mv_04.jpg" alt="お料理" data-id="food">
+                <img src="../img/mv_05.jpg" alt="館内紹介" data-id="hotel_guide">
+                <img src="../img/mv_06.jpg" alt="アクセス" data-id="access">
             </div>
             <div class="header__side--menu">
                 <div class="header__side--link">
-                    <h1>
-                        光華亭
-                    </h1>
+                    <h1>光華亭</h1>
                     <nav>
                         <ul>
                             <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
@@ -73,38 +76,12 @@
             </div>
         </div>
     </header>
-    <main class="bath-main">
-        <section class="bath-main__concept">
-            <h2 class="bath-main__concept--title">お風呂</h2>
-            <p class="bath-main__concept--text">夜空に輝く満天の星を眺めながら、心地よい湯に包まれる贅沢なひととき。<br>
-                周囲を囲む木々と澄んだ空気が、都会の喧騒を忘れさせてくれます。<br>
-                昼は爽やかな光を浴びながら、夜は星空と月明かりの下で、季節の移ろいを感じられる開放的なお風呂です。</p>
-        </section>
-        <section class="bath-main__details">
-            <h3>お風呂の概要</h3>
-            <table class="bath-main__details--table">
-                <tr>
-                    <th>泉質</th>
-                    <td>弱アルカリ性単純泉<br>肌にやさしく、保湿効果が高い湯質で「美肌の湯」として知られています。</td>
-                </tr>
-                <tr>
-                    <th>適応症</th>
-                    <td>疲労回復、冷え性、肩こり、神経痛、リウマチ、慢性消化器病など</td>
-                </tr>
-                <tr>
-                    <th>利用時間</th>
-                    <td>6:00～10:00 15:00～23:00</td>
-                </tr>
-            </table>
-        </section>
-        <section class="bath-main__private">
-            <div class="bath-main__private--text">
-                <p>お部屋にも専用露天風呂がございます。</p>
-                <p>どうぞ、自慢のお風呂をお好きな時間に、ゆったりと存分にお楽しみください。</p>
-            </div>
-            <div class="bath-main__private--reservation">
-                <a href="" class="bath-main__private--link">ご予約はこちら</a>
-            </div>
+    <main class="food-main">
+        <section class="food-main__concept">
+            <h2 class="food-main__concept--title">お料理</h2>
+            <p class="food-main__concept--text">信州の豊かな自然が育んだ新鮮な地元食材をふんだんに使用し、四季を感じる繊細な和会席をご提供いたします。地元の農家から直送される旬の野菜、信州産の川魚、この地ならではの食材を活かしたお料理の数々をご堪能ください。
+                料理人のこだわりが光る一皿一皿が、目でも舌でも楽しめる贅沢なひとときをお届けします。
+                食事は、お部屋食でごゆっくりとお楽しみいただけます。</p>
         </section>
     </main>
 
@@ -117,7 +94,8 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/menu-btn.js"></script>
-    <script src="js/hover-image.js"></script>
-    <script src="js/scroll.js"></script>
+    <script src="../js/menu-btn.js"></script>
+    <script src="../js/hover-image.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/footer-background-check.js"></script>
 </body>

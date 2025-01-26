@@ -275,7 +275,6 @@
         top: 70px;
         right: 0;
         color: #F5F5F3;
-        // text-shadow: #333333 1px 0 10px;
         z-index: 10;
 
         .black {
@@ -327,8 +326,6 @@
                 position: relative;
                 cursor: pointer;
 
-
-
                 &::after {
                     content: "";
                     display: block;
@@ -347,6 +344,49 @@
                     opacity: 1;
 
                 }
+
+                &.white {
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 0px;
+                        height: 1px;
+                        position: absolute;
+                        bottom: 5px;
+                        left: 70px;
+                        background-color: #F5F5F3;
+                        transition: width 0.3s ease;
+                        opacity: 0;
+                    }
+
+                    &:hover::after {
+                        width: 30px;
+                        opacity: 1;
+
+                    }
+                }
+
+                &.black {
+                    &::after {
+                        content: "";
+                        display: block;
+                        width: 0px;
+                        height: 1px;
+                        position: absolute;
+                        bottom: 5px;
+                        left: 70px;
+                        background-color: #333333;
+                        transition: width 0.3s ease;
+                        opacity: 0;
+                    }
+
+                    &:hover::after {
+                        width: 30px;
+                        opacity: 1;
+
+                    }
+                }
+
             }
         }
 
@@ -356,7 +396,7 @@
 
             &:hover {
                 color: #666;
-                    transform: scale(1.2);
+                transform: scale(1.2);
             }
 
 
@@ -391,7 +431,6 @@
             right: 0;
             z-index: 10;
             color: #333333;
-            text-shadow: #F5F5F3 1px 0 10px;
 
             @include sp {
                 width: 70px;
@@ -404,8 +443,6 @@
                 &:hover {
                     color: #666;
                 }
-
-                // ↑効いていない
 
                 @include sp {
                     padding: 20px 10px;
@@ -442,6 +479,12 @@
                         color: #666;
                     }
 
+                    &.white {
+                        &:hover {
+                            color: #bbbbbb;
+                        }
+                    }
+
 
                     &::after {
                         content: "";
@@ -460,6 +503,48 @@
                         width: 30px;
                         opacity: 1;
 
+                    }
+
+                    &.white {
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 0px;
+                            height: 1px;
+                            position: absolute;
+                            bottom: 5px;
+                            left: 70px;
+                            background-color: #F5F5F3;
+                            transition: width 0.3s ease;
+                            opacity: 0;
+                        }
+
+                        &:hover::after {
+                            width: 30px;
+                            opacity: 1;
+    
+                        }
+                    }
+    
+                    &.black {
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 0px;
+                            height: 1px;
+                            position: absolute;
+                            bottom: 5px;
+                            left: 70px;
+                            background-color: #333333;
+                            transition: width 0.3s ease;
+                            opacity: 0;
+                        }
+
+                        &:hover::after {
+                            width: 30px;
+                            opacity: 1;
+    
+                        }
                     }
                 }
             }
@@ -490,11 +575,25 @@
                         transform: scale(1.2);
                     }
 
+                    &.white {
+                        &:hover {
+                            color: #bbbbbb;
+                            transform: scale(1.2);
+                        }
+                    }
+
 
                 }
 
             }
 
+            .white {
+                color: #F5F5F3;
+            }
+
+            .black {
+                color: #333333;
+            }
         }
 
 
@@ -548,6 +647,12 @@
                         color: #666;
                     }
 
+                    &.white {
+                        &:hover {
+                            color: #bbbbbb;
+                        }
+                    }
+
 
                     &::after {
                         content: "";
@@ -567,6 +672,48 @@
                         opacity: 1;
 
                     }
+
+                    &.white {
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 0px;
+                            height: 1px;
+                            position: absolute;
+                            bottom: 5px;
+                            left: 70px;
+                            background-color: #F5F5F3;
+                            transition: width 0.3s ease;
+                            opacity: 0;
+                        }
+
+                        &:hover::after {
+                            width: 30px;
+                            opacity: 1;
+    
+                        }
+                    }
+    
+                    &.black {
+                        &::after {
+                            content: "";
+                            display: block;
+                            width: 0px;
+                            height: 1px;
+                            position: absolute;
+                            bottom: 5px;
+                            left: 70px;
+                            background-color: #333333;
+                            transition: width 0.3s ease;
+                            opacity: 0;
+                        }
+
+                        &:hover::after {
+                            width: 30px;
+                            opacity: 1;
+    
+                        }
+                    }
                 }
             }
 
@@ -582,12 +729,28 @@
                 a {
                     color: #333333;
                     transition: transform 0.3s ease;
-                &:hover {
-                    color: #666;
-                    transform: scale(1.2);
-                }
-}
 
+                    &:hover {
+                        color: #666;
+                        transform: scale(1.2);
+                    }
+
+                    &.white {
+                        &:hover {
+                            color: #bbbbbb;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+
+            }
+
+            .white {
+                color: #F5F5F3;
+            }
+
+            .black {
+                color: #333333;
             }
         }
     }

@@ -24,17 +24,17 @@
 
         &--title {
             position: absolute;
-            top: -300px;
+            top: -40px;
             left: 100px;
-            color:#F5F5F3;
+            color:#333333;
             letter-spacing: 2px;
             margin: 15px 0 0;
-            transition: top 0.3s ease;
+            // transition: top 0.3s ease;
 
-            @include tab {
-                position: static;
+            // @include tab {
+            //     position: static;
 
-            }
+            // }
         }
             &--text {
                 line-height: 30px;

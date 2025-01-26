@@ -1,167 +1,82 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php get_header(); ?>
 
-<head>
-    <meta charset="utf-8">
-    <title>光華亭</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php wp_head(); ?>
-</head>
-
-<body>
-    <header class="header">
-        <div class="header__menu">
-            <span class="white"></span>
-            <span class="white"></span>
-            <span class="white"></span>
+<main class="main">
+    <section class="main__concept">
+        <h2 id="title" class="main__concept--title">光と花が織りなす、心ほどける癒しのひととき</h2>
+        <p class="main__concept--text">柔らかな光と四季を感じる華やかな空間で、日常を忘れる特別な時間をお過ごしください。<br>
+            和の美しさとモダンな快適さが調和した空間で、大切な人とのひとときや自分自身をいたわる贅沢を。<br>
+            光華亭は、訪れる全てのお客様に癒しと感動をお届けします。</p>
+    </section>
+    <section class="main__room">
+        <div class="main__room--img">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/room_01.jpg'); ?>" alt="room">
         </div>
-        <div class="header__link">
-            <h1>
-                <a href="<?php echo esc_url( home_url() ); ?>" >光華亭</a>
-            </h1>
-            <nav>
-                <ul>
-                <li><a id="__room1" href="<?php echo esc_url( home_url( '/room1.html' ) ); ?>" data-img="room1">お部屋</a></li>
-<li><a id="__bath" href="<?php echo esc_url( home_url( '/bath.html' ) ); ?>" data-img="bath">お風呂</a></li>
-<li><a id="__food" href="<?php echo esc_url( home_url( '/food.html' ) ); ?>" data-img="food">お料理</a></li>
-<li><a id="__hotel_guide" href="<?php echo esc_url( home_url( '/hotel_guide.html' ) ); ?>" data-img="hotel_guide">館内紹介</a></li>
-<li><a id="__access" href="<?php echo esc_url( home_url( '/access.html' ) ); ?>" data-img="access">アクセス</a></li>
-                </ul>
-            </nav>
-            <p>
-                <a href="" class="reservation-btn">予約</a>
-            </p>
-        </div>
-        <div class="header__mainvisual--img">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_01.jpg'); ?>" alt="mainvisual">
+        <div class="main__room--wrapper">
+            <h3 class="main__room--wrapper--title">お部屋</h3>
+            <p class="main__room--wrapper--text">光華亭では、お客様一人ひとりが特別な時間を過ごせるよう、3種類の趣異なるお部屋をご用意しております。</p>
+            <div class="main__room--wrapper--reservation">
+                <a href="<?php echo esc_url(home_url('/room1.html')); ?>">お部屋について</a>
+            </div>
         </div>
 
-
-        <div class="header__side" id="__remove-transition">
-            <div class="header__side--img">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_01.jpg'); ?>" alt="トップ画像" id="top-image">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_02.jpg'); ?>" alt="お部屋" data-id="room1">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_03.jpg'); ?>" alt="お風呂" data-id="bath">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_04.jpg'); ?>" alt="お料理" data-id="food">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_05.jpg'); ?>" alt="館内紹介" data-id="hotel_guide">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_06.jpg'); ?>" alt="アクセス" data-id="access">
-            </div>
-            <div class="header__side--menu">
-                <div class="header__side--link">
-                    <h1>光華亭</h1>
-                    <nav>
-                        <ul>
-                            <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
-                            <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
-                            <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
-                            <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
-                            <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
-                        </ul>
-                    </nav>
-                    <div class="header__side--reservation">
-                        <a href="">ご予約はこちら</a>
-                    </div>
-                    <address class="header__side--address">
-                        <p>〒390-1521 長野県松本市美ヶ原高原1234-5<br>
-                            TEL:0263-87-0011 / FAX:0263-87-0012</p>
-                    </address>
-                </div>
+    </section>
+    <section class="main__bath">
+        <div class="main__bath--img">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/bath_01.jpg'); ?>" alt="bath">
+        </div>
+        <div class="main__bath--wrapper">
+            <h3 class="main__bath--wrapper--title">お風呂</h3>
+            <p class="main__bath--wrapper--text">光華亭では、四季折々の自然と調和したお風呂をご用意しております。
+                湯けむりとともに訪れる静寂と、身体の芯から温まる湯浴みが、心身の疲れをほどいてくれます。</p>
+            <div class="main__bath--wrapper--reservation">
+                <a href="<?php echo esc_url(home_url('/bath.html')); ?>">お風呂について</a>
             </div>
         </div>
-    </header>
-
-    <main class="main">
-        <section class="main__concept">
-            <h2 id="title" class="main__concept--title">光と花が織りなす、心ほどける癒しのひととき</h2>
-            <p class="main__concept--text">柔らかな光と四季を感じる華やかな空間で、日常を忘れる特別な時間をお過ごしください。<br>
-                和の美しさとモダンな快適さが調和した空間で、大切な人とのひとときや自分自身をいたわる贅沢を。<br>
-                光華亭は、訪れる全てのお客様に癒しと感動をお届けします。</p>
-        </section>
-        <section class="main__room">
-            <div class="main__room--img">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/room_01.jpg'); ?>" alt="room">
-            </div>
-            <div class="main__room--wrapper">
-                <h3 class="main__room--wrapper--title">お部屋</h3>
-                <p class="main__room--wrapper--text">光華亭では、お客様一人ひとりが特別な時間を過ごせるよう、3種類の趣異なるお部屋をご用意しております。</p>
-                <div class="main__room--wrapper--reservation">
-                    <a href="<?php echo esc_url( home_url( '/room1.html' ) ); ?>" >お部屋について</a>
-                </div>
-            </div>
-
-        </section>
-        <section class="main__bath">
-            <div class="main__bath--img">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/bath_01.jpg'); ?>" alt="bath">
-            </div>
-            <div class="main__bath--wrapper">
-                <h3 class="main__bath--wrapper--title">お風呂</h3>
-                <p class="main__bath--wrapper--text">光華亭では、四季折々の自然と調和したお風呂をご用意しております。
-                    湯けむりとともに訪れる静寂と、身体の芯から温まる湯浴みが、心身の疲れをほどいてくれます。</p>
-                <div class="main__bath--wrapper--reservation">
-                    <a href="<?php echo esc_url( home_url( '/bath.html' ) ); ?>" >お風呂について</a>
-                </div>
-            </div>
-        </section>
-        <section class="main__food">
-            <div class="main__food--img">
-                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/food_01.jpg'); ?>" alt="food">
-            </div>
-            <div class="main__food--wrapper">
-                <h3 class="main__food--wrapper--title">お料理</h3>
-                <p class="main__food--wrapper--text">
-                    料理長が厳選した旬の食材を使用した会席料理は、四季の移ろいを感じられる繊細な味わいが魅力です。地元の新鮮な海の幸や山の幸を活かした献立は、訪れるたびに新たな感動をお楽しみいただけます。</p>
-                <div class="main__food--wrapper--reservation">
-                    <a href="<?php echo esc_url( home_url( '/food.html' ) ); ?>" >お料理について</a>
-                </div>
-            </div>
-        </section>
-        <section class="main__news">
-            <div class="main__news--header">
-                <h3 class="main__news--header--title">お知らせ</h3>
-                <a href="news.html" class="main__news--header--link">一覧で見る</a>
-            </div>
-            <div class="main__news--list">
-                <a href="news-detail.html" class="main__news--list--item">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_01.jpg'); ?>" alt="">
-                    <p>Webサイトリニューアル</p>
-                </a>
-                <a href="news-detail.html" class="main__news--list--item">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_02.jpg'); ?>" alt="">
-                    <p>大浴場改修工事</p>
-                </a>
-                <a href="news-detail.html" class="main__news--list--item">
-                    <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_06.jpg'); ?>" alt="">
-                    <p>年末年始の営業について</p>
-                </a>
-            </div>
-        </section>
-        <section class="main__reservation">
-            <h3 class="main__reservation--title">ご予約</h3>
-            <p class="main__reservation--description">ご予約は専用予約フォームまたは、お電話にて承ります。</p>
-            <p class="main__reservation--note">当サイトからのご予約が最もお得です。</p>
-            <div class="main__reservation--container">
-                <p class="main__reservation--phone">Tel.0123-45-6789</p>
-                <p class="main__reservation--hours">受付時間： 9:00~ 19:00</p>
-                <div class="main__reservation--button">
-                    <a href="" class="main__reservation--link">ご予約はこちら</a>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer__container">
-            <h2>光華亭</h2>
-            <p>〒390-1521 長野県松本市美ヶ原高原1234-5</p>
-            <p>TEL:0123-45-6789/ FAX:0123-45-6788</p>
+    </section>
+    <section class="main__food">
+        <div class="main__food--img">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/food_01.jpg'); ?>" alt="food">
         </div>
-    </footer>
-    <?php wp_footer(); ?>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/menu-btn.js"></script>
-    <script src="js/hover-image.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/background-check.js"></script>
-</body>
+        <div class="main__food--wrapper">
+            <h3 class="main__food--wrapper--title">お料理</h3>
+            <p class="main__food--wrapper--text">
+                料理長が厳選した旬の食材を使用した会席料理は、四季の移ろいを感じられる繊細な味わいが魅力です。地元の新鮮な海の幸や山の幸を活かした献立は、訪れるたびに新たな感動をお楽しみいただけます。</p>
+            <div class="main__food--wrapper--reservation">
+                <a href="<?php echo esc_url(home_url('/food.html')); ?>">お料理について</a>
+            </div>
+        </div>
+    </section>
+    <section class="main__news">
+        <div class="main__news--header">
+            <h3 class="main__news--header--title">お知らせ</h3>
+            <a href="news.html" class="main__news--header--link">一覧で見る</a>
+        </div>
+        <div class="main__news--list">
+            <a href="news-detail.html" class="main__news--list--item">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_01.jpg'); ?>" alt="">
+                <p>Webサイトリニューアル</p>
+            </a>
+            <a href="news-detail.html" class="main__news--list--item">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_02.jpg'); ?>" alt="">
+                <p>大浴場改修工事</p>
+            </a>
+            <a href="news-detail.html" class="main__news--list--item">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_06.jpg'); ?>" alt="">
+                <p>年末年始の営業について</p>
+            </a>
+        </div>
+    </section>
+    <section class="main__reservation">
+        <h3 class="main__reservation--title">ご予約</h3>
+        <p class="main__reservation--description">ご予約は専用予約フォームまたは、お電話にて承ります。</p>
+        <p class="main__reservation--note">当サイトからのご予約が最もお得です。</p>
+        <div class="main__reservation--container">
+            <p class="main__reservation--phone">Tel.0123-45-6789</p>
+            <p class="main__reservation--hours">受付時間： 9:00~ 19:00</p>
+            <div class="main__reservation--button">
+                <a href="" class="main__reservation--link">ご予約はこちら</a>
+            </div>
+        </div>
+    </section>
+</main>
+<?php get_footer(); ?>

@@ -19,7 +19,7 @@
             <span></span>
             <span></span>
         </div>
-        <div class="header__link-room">
+        <div class="header__link-room" id="__background-check">
             <h1>
                 <a href="index.html">光華亭</a>
             </h1>
@@ -36,16 +36,16 @@
                 <a href="">予約</a>
             </p>
         </div>
-        <div class="header__mainvisual--img-room" data-default-img="room_04">
-            <img src="img/room_04.jpg" alt="mainvisual" data-id="room_04">
+        <div class="header__mainvisual--img-room" data-default-img="room_02">
+            <img src="img/room_02.jpg" alt="mainvisual" data-id="room_02">
             <img src="img/room_05.jpg" alt="mainvisual" data-id="room_05" style="display: none;">
-            <img src="img/room_10.jpg" alt="mainvisual" data-id="room_10" style="display: none;">
             <img src="img/room_06.jpg" alt="mainvisual" data-id="room_06" style="display: none;">
+            <img src="img/room_07.jpg" alt="mainvisual" data-id="room_07" style="display: none;">
         </div>
         <div class="header__mainvisual--img-select">
             <img src="img/room_05.jpg" alt="room" data-img="room_05">
-            <img src="img/room_10.jpg" alt="room" data-img="room_10">
             <img src="img/room_06.jpg" alt="room" data-img="room_06">
+            <img src="img/room_07.jpg" alt="room" data-img="room_07">
         </div>
         <div class="header__side" id="__remove-transition">
             <div class="header__side--img">
@@ -63,7 +63,6 @@
                     </h1>
                     <nav>
                         <ul>
-                            <li><a href="room1.html">お部屋</a></li>
                             <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
                             <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
                             <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
@@ -84,7 +83,7 @@
     </header>
     <main class="room-main">
         <section class="room-main__concept">
-            <h2 class="room-main__concept--title">白露スイートルーム</h2>
+            <h2 class="room-main__concept--title">朝霧スタンダードルーム</h2>
             <p class="room-main__concept--text">光華亭の基本となるお部屋でありながら、落ち着きと温もりを兼ね備えた空間。<br>
                 清々しい朝の光が差し込むシンプルで心地よい設計が特徴です。</p>
             <div class="room-main__room-list--item--menu--reservation">
@@ -96,7 +95,7 @@
             <table class="room-main__details--table">
                 <tr>
                     <th>客室タイプ</th>
-                    <td>白露スイートルーム</td>
+                    <td>朝霧スタンダードルーム</td>
                 </tr>
                 <tr>
                     <th>間取り</th>
@@ -137,4 +136,5 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/menu-btn.js"></script>
     <script src="js/hover-image.js"></script>
+    <script src="js/footer-background-check.js"></script>
 </body>
