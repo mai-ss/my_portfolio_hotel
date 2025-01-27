@@ -4,11 +4,9 @@
 @use '../mixin' as *;
 
 .main {
-    position: relative;
-
     &__concept {
         max-width: 1300px;
-        margin: 20px 200px;
+        margin: 150px 200px;
 
         @include tab {
             max-width: 600px;
@@ -21,24 +19,15 @@
         }
 
         &--title {
-            position: absolute;
-            top: 0;
-            left: 100px;
             color: #333333;
             letter-spacing: 2px;
-            // transition: top 0.3s ease;
-
-            // @include tab {
-            //     position: static;
-            //     color: #333333;
-
-            // }
+            margin: 50px 0 30px;
         }
 
         &--text {
             line-height: 30px;
-            margin: 120px 0;
-            padding: 60px 0;
+            margin: 20px 0 100px;
+            padding: 20px 0;
 
             @include tab {
                 margin: 20px auto;
@@ -49,7 +38,7 @@
 
     }
 
-    /**************************************
+/**************************************
     館内紹介(hotel_guide.html)
 ***************************************/
 

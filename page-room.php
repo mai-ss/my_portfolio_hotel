@@ -1,0 +1,141 @@
+<?php get_header(); ?>
+
+<body>
+    <header class="header">
+        <div class="header__menu-room">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="header__link-room" id="__background-check">
+            <h1>
+                <a href="index.html">光華亭</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
+                    <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
+                    <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
+                    <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
+                    <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
+                </ul>
+            </nav>
+            <p>
+                <a href="">予約</a>
+            </p>
+        </div>
+        <div class="header__mainvisual--img-room">
+            <img src="../img/room_01.jpg" alt="mainvisual">
+        </div>
+        <div class="header__side" id="__remove-transition">
+            <div class="header__side--img">
+                <img src="../img/mv_01.jpg" alt="トップ画像" id="top-image">
+                <img src="../img/mv_02.jpg" alt="お部屋" data-id="room1">
+                <img src="../img/mv_03.jpg" alt="お風呂" data-id="bath">
+                <img src="../img/mv_04.jpg" alt="お料理" data-id="food">
+                <img src="../img/mv_05.jpg" alt="館内紹介" data-id="hotel_guide">
+                <img src="../img/mv_06.jpg" alt="アクセス" data-id="access">
+            </div>
+            <div class="header__side--menu">
+                <div class="header__side--link">
+                    <h1>光華亭</h1>
+                    <nav>
+                        <ul>
+                            <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
+                            <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
+                            <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
+                            <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
+                            <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__side--reservation">
+                        <a href="">ご予約はこちら</a>
+                    </div>
+                    <address class="header__side--address">
+                        <p>〒390-1521 長野県松本市美ヶ原高原1234-5<br>
+                            TEL:0263-87-0011 / FAX:0263-87-0012</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="room-main">
+        <section class="room-main__concept">
+            <h2 class="room-main__concept--title">お部屋</h2>
+            <p class="room-main__concept--text">光華亭では、お客様一人ひとりが特別な時間を過ごせるよう、
+                3種類の趣異なるお部屋をご用意しております。</p>
+            <ul class="room-main__link">
+                <li><a href="#__room02">朝霧スタンダードルーム</a></li>
+                <li><a href="#__room03">夕凪プレミアムルーム</a></li>
+                <li><a href="#__room04">白露スイートルーム</a></li>
+            </ul>
+        </section>
+        <section class="room-main__room-list">
+            <ul class="room-main__room-list--items">
+                <li class="room-main__room-list--item" id="__room02">
+                    <div class="room-main__room-list--item--img">
+                        <img src="../img/room_02.jpg" alt="">
+                    </div>
+                    <div class="room-main__room-list--item--menu">
+                        <p>朝霧スタンダードルーム</p>
+                        <p>シンプルながら洗練された空間で、<br>
+                            安らぎのひとときをお過ごしいただけます。</p>
+                        <div class="room-main__room-list--item--menu--reservation">
+                            <a href="room2.html">詳細はこちら</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="room-main__room-list--item" id="__room03">
+                    <div class="room-main__room-list--item--img">
+                        <img src="../img/room_03.jpg" alt="">
+                    </div>
+                    <div class="room-main__room-list--item--menu">
+                        <p>夕凪プレミアムルーム</p>
+                        <p>落ち着いた設えと絶景を堪能できる上質な時間をお届けします。</p>
+                        <div class="room-main__room-list--item--menu--reservation">
+                            <a href="room3.html">詳細はこちら</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="room-main__room-list--item" id="__room04">
+                    <div class="room-main__room-list--item--img">
+                        <img src="../img/room_04.jpg" alt="">
+                    </div>
+                    <div class="room-main__room-list--item--menu">
+                        <p>白露スイートルーム</p>
+                        <p>専用露天風呂や広々とした和モダン空間で、非日常の贅沢を存分にお楽しみいただけます。</p>
+                        <div class="room-main__room-list--item--menu--reservation">
+                            <a href="room4.html">詳細はこちら</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="main__reservation">
+            <h3 class="main__reservation--title">ご予約</h3>
+            <p class="main__reservation--description">ご予約は専用予約フォームまたは、お電話にて承ります。</p>
+            <p class="main__reservation--note">当サイトからのご予約が最もお得です。</p>
+            <div class="main__reservation--container">
+                <p class="main__reservation--phone">Tel.0123-45-6789</p>
+                <p class="main__reservation--hours">受付時間： 9:00~ 19:00</p>
+                <div class="main__reservation--button">
+                    <a href="" class="main__reservation--link">ご予約はこちら</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <h2>光華亭</h2>
+            <p>〒390-1521 長野県松本市美ヶ原高原1234-5</p>
+            <p>TEL:0123-45-6789/ FAX:0123-45-6788</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../js/menu-btn.js"></script>
+    <script src="../js/hover-image.js"></script>
+    <script src="../js/scroll.js"></script>
+    <script src="../js/footer-background-check.js"></script>
+</body>
