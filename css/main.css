@@ -1150,7 +1150,7 @@
   z-index: -110;
 }
 .header__side--menu h1 {
-  padding: 150px 20px 60px;
+  padding: 100px 20px 60px;
   text-align: center;
   color: #333333;
 }
@@ -1325,7 +1325,7 @@
   }
 }
 .main__facility-info {
-  width: 1300px;
+  max-width: 1300px;
   margin: 200px;
 }
 @media screen and (max-width: 860px) {
@@ -1347,8 +1347,23 @@
   padding: 20px 10px;
   text-align: left;
 }
+@media screen and (max-width: 860px) {
+  .main__facility-info--table th {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .main__facility-info--table th {
+    font-size: 0.7rem;
+  }
+}
 .main__facility-info--table td {
   padding: 20px 0;
+}
+@media screen and (max-width: 480px) {
+  .main__facility-info--table td {
+    font-size: 0.7rem;
+  }
 }
 .main__room, .main__bath, .main__food {
   letter-spacing: 2px;

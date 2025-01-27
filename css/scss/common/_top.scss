@@ -43,7 +43,7 @@
 ***************************************/
 
     &__facility-info {
-        width: 1300px;
+        max-width: 1300px;
         margin: 200px;
 
         @include tab {
@@ -65,10 +65,20 @@
             th {
                 padding: 20px 10px;
                 text-align: left;
+                @include tab {
+                    padding: 10px;
+                }
+                @include sp {
+                    font-size: 0.7rem;
+                }
             }
 
             td {
                 padding: 20px 0;
+
+                @include sp {
+                    font-size: 0.7rem;
+                }
             }
         }
     }
