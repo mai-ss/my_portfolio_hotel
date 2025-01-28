@@ -295,7 +295,7 @@
         }
 
         h1 {
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
 
             a {
@@ -309,7 +309,7 @@
         }
 
         nav {
-            padding: 50px 20px;
+            padding: 40px 20px;
 
             @include sp {
                 display: none;
@@ -860,7 +860,7 @@
             z-index: -110;
 
             h1 {
-                padding: 100px 20px 60px;
+                padding: 100px 20px 40px;
                 text-align: center;
                 color: #333333;
 

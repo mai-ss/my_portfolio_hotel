@@ -662,7 +662,7 @@
   }
 }
 .header__link h1 {
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 .header__link h1 a {
@@ -675,7 +675,7 @@
   }
 }
 .header__link nav {
-  padding: 50px 20px;
+  padding: 40px 20px;
 }
 @media screen and (max-width: 480px) {
   .header__link nav {
@@ -1150,7 +1150,7 @@
   z-index: -110;
 }
 .header__side--menu h1 {
-  padding: 100px 20px 60px;
+  padding: 100px 20px 40px;
   text-align: center;
   color: #333333;
 }
