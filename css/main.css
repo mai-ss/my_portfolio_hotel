@@ -452,7 +452,6 @@
   position: fixed;
   top: 0;
   right: 80px;
-  color: #333333;
   z-index: 1000;
   cursor: pointer;
 }
@@ -461,181 +460,44 @@
     right: 10px;
   }
 }
-.header__menu span.white {
+.header__menu span {
   display: block;
   position: absolute;
   height: 2px;
   width: 70%;
-  background: #F5F5F3;
   border-radius: 5px;
   left: 15%;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-.header__menu span.white:nth-of-type(1) {
+.header__menu span:nth-of-type(1) {
   top: 13px;
 }
-.header__menu span.white:nth-of-type(2) {
+.header__menu span:nth-of-type(2) {
   top: 22px;
 }
-.header__menu span.white:nth-of-type(3) {
+.header__menu span:nth-of-type(3) {
   top: 31px;
+}
+.header__menu span.white {
+  background: #F5F5F3;
 }
 .header__menu span.black {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 70%;
   background: #333333;
-  border-radius: 5px;
-  left: 15%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.header__menu span.black:nth-of-type(1) {
-  top: 13px;
-}
-.header__menu span.black:nth-of-type(2) {
-  top: 22px;
-}
-.header__menu span.black:nth-of-type(3) {
-  top: 31px;
-}
-.header__menu span.black .white {
-  background-color: #F5F5F3 !important;
 }
 .header__menu.active span:nth-of-type(1) {
   top: 22px;
-  /* 真ん中に移動 */
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  /* 斜め左下に回転 */
   background-color: #333333;
 }
 .header__menu.active span:nth-of-type(2) {
   opacity: 0;
-  /* 非表示にする */
 }
 .header__menu.active span:nth-of-type(3) {
   top: 22px;
-  /* 真ん中に移動 */
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-  /* 斜め右下に回転 */
-  background-color: #333333;
-}
-.header__menu-room, .header__menu-bath, .header__menu-food {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  margin: 30px auto;
-  position: fixed;
-  top: 0;
-  right: 80px;
-  color: #333333;
-  z-index: 1000;
-  cursor: pointer;
-}
-@media screen and (max-width: 480px) {
-  .header__menu-room, .header__menu-bath, .header__menu-food {
-    right: 10px;
-  }
-}
-.header__menu-room span, .header__menu-bath span, .header__menu-food span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 70%;
-  background: #333333;
-  border-radius: 5px;
-  left: 15%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.header__menu-room span:nth-of-type(1), .header__menu-bath span:nth-of-type(1), .header__menu-food span:nth-of-type(1) {
-  top: 13px;
-}
-.header__menu-room span:nth-of-type(2), .header__menu-bath span:nth-of-type(2), .header__menu-food span:nth-of-type(2) {
-  top: 22px;
-}
-.header__menu-room span:nth-of-type(3), .header__menu-bath span:nth-of-type(3), .header__menu-food span:nth-of-type(3) {
-  top: 31px;
-}
-.header__menu-room.active span:nth-of-type(1), .header__menu-bath.active span:nth-of-type(1), .header__menu-food.active span:nth-of-type(1) {
-  top: 22px;
-  /* 真ん中に移動 */
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  /* 斜め左下に回転 */
-  background-color: #333333;
-}
-.header__menu-room.active span:nth-of-type(2), .header__menu-bath.active span:nth-of-type(2), .header__menu-food.active span:nth-of-type(2) {
-  opacity: 0;
-  /* 非表示にする */
-}
-.header__menu-room.active span:nth-of-type(3), .header__menu-bath.active span:nth-of-type(3), .header__menu-food.active span:nth-of-type(3) {
-  top: 22px;
-  /* 真ん中に移動 */
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  /* 斜め右下に回転 */
-  background-color: #333333;
-}
-.header__menu-hotel_guide, .header__menu-access, .header__menu-news {
-  width: 50px;
-  height: 50px;
-  border-radius: 5px;
-  margin: 30px auto;
-  position: fixed;
-  top: 0;
-  right: 80px;
-  color: #0d0d0c;
-  z-index: 1000;
-  cursor: pointer;
-}
-@media screen and (max-width: 480px) {
-  .header__menu-hotel_guide, .header__menu-access, .header__menu-news {
-    right: 10px;
-  }
-}
-.header__menu-hotel_guide span, .header__menu-access span, .header__menu-news span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 70%;
-  background: #333333;
-  border-radius: 5px;
-  left: 15%;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-.header__menu-hotel_guide span:nth-of-type(1), .header__menu-access span:nth-of-type(1), .header__menu-news span:nth-of-type(1) {
-  top: 13px;
-}
-.header__menu-hotel_guide span:nth-of-type(2), .header__menu-access span:nth-of-type(2), .header__menu-news span:nth-of-type(2) {
-  top: 22px;
-}
-.header__menu-hotel_guide span:nth-of-type(3), .header__menu-access span:nth-of-type(3), .header__menu-news span:nth-of-type(3) {
-  top: 31px;
-}
-.header__menu-hotel_guide.active span:nth-of-type(1), .header__menu-access.active span:nth-of-type(1), .header__menu-news.active span:nth-of-type(1) {
-  top: 22px;
-  /* 真ん中に移動 */
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  /* 斜め左下に回転 */
-  background-color: #333333;
-}
-.header__menu-hotel_guide.active span:nth-of-type(2), .header__menu-access.active span:nth-of-type(2), .header__menu-news.active span:nth-of-type(2) {
-  opacity: 0;
-  /* 非表示にする */
-}
-.header__menu-hotel_guide.active span:nth-of-type(3), .header__menu-access.active span:nth-of-type(3), .header__menu-news.active span:nth-of-type(3) {
-  top: 22px;
-  /* 真ん中に移動 */
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  /* 斜め右下に回転 */
   background-color: #333333;
 }
 .header__link {
@@ -644,17 +506,13 @@
   position: fixed;
   top: 70px;
   right: 0;
-  color: #F5F5F3;
   z-index: 10;
-}
-.header__link .black {
-  color: #333333;
 }
 .header__link .white {
   color: #F5F5F3;
 }
-.header__link a {
-  color: #F5F5F3;
+.header__link .black {
+  color: #333333;
 }
 @media screen and (max-width: 480px) {
   .header__link {
@@ -665,9 +523,8 @@
   padding: 60px 20px;
   text-align: center;
 }
-.header__link h1 a {
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
+.header__link h1:hover {
+  color: #666;
 }
 @media screen and (max-width: 480px) {
   .header__link h1 {
@@ -675,7 +532,7 @@
   }
 }
 .header__link nav {
-  padding: 40px 20px;
+  padding: 30px 20px;
 }
 @media screen and (max-width: 480px) {
   .header__link nav {
@@ -688,8 +545,8 @@
 }
 .header__link nav a {
   color: inherit;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   position: relative;
   cursor: pointer;
 }
@@ -701,7 +558,7 @@
   position: absolute;
   bottom: 5px;
   left: 70px;
-  background-color: #F5F5F3;
+  background-color: currentColor;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
   opacity: 0;
@@ -710,48 +567,16 @@
   width: 30px;
   opacity: 1;
 }
-.header__link nav a.white::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  background-color: #F5F5F3;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  opacity: 0;
+.header__link nav a:hover {
+  color: #666;
 }
-.header__link nav a.white:hover::after {
-  width: 30px;
-  opacity: 1;
-}
-.header__link nav a.black::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  background-color: #333333;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  opacity: 0;
-}
-.header__link nav a.black:hover::after {
-  width: 30px;
-  opacity: 1;
+.header__link nav a:hover.white {
+  color: #bbbbbb;
 }
 .header__link p {
   text-align: center;
-  margin: 80px 0 80px;
-}
-.header__link p:hover {
-  color: #666;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  margin: 80px 0;
+  cursor: pointer;
 }
 @media screen and (max-width: 480px) {
   .header__link p {
@@ -759,297 +584,19 @@
   }
 }
 .header__link p a {
-  color: #F5F5F3;
+  color: inherit;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  display: inline-block;
 }
 .header__link p a:hover {
+  color: #666;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-.header__link-room, .header__link-food, .header__link-bath, .header__link-access, .header__link-news {
-  width: 200px;
-  height: 100vh;
-  position: fixed;
-  top: 70px;
-  right: 0;
-  z-index: 10;
-  color: #333333;
-}
-@media screen and (max-width: 480px) {
-  .header__link-room, .header__link-food, .header__link-bath, .header__link-access, .header__link-news {
-    width: 70px;
-  }
-}
-.header__link-room h1, .header__link-food h1, .header__link-bath h1, .header__link-access h1, .header__link-news h1 {
-  padding: 80px 20px;
-  text-align: center;
-}
-.header__link-room h1:hover, .header__link-food h1:hover, .header__link-bath h1:hover, .header__link-access h1:hover, .header__link-news h1:hover {
-  color: #666;
-}
-@media screen and (max-width: 480px) {
-  .header__link-room h1, .header__link-food h1, .header__link-bath h1, .header__link-access h1, .header__link-news h1 {
-    padding: 20px 10px;
-  }
-}
-.header__link-room nav, .header__link-food nav, .header__link-bath nav, .header__link-access nav, .header__link-news nav {
-  padding: 50px 20px;
-}
-@media screen and (max-width: 480px) {
-  .header__link-room nav, .header__link-food nav, .header__link-bath nav, .header__link-access nav, .header__link-news nav {
-    display: none;
-  }
-}
-.header__link-room nav ul li, .header__link-food nav ul li, .header__link-bath nav ul li, .header__link-access nav ul li, .header__link-news nav ul li {
-  text-align: center;
-  padding-top: 30px;
-}
-.header__link-room nav a, .header__link-food nav a, .header__link-bath nav a, .header__link-access nav a, .header__link-news nav a {
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-  position: relative;
-  cursor: pointer;
-}
-.header__link-room nav a .black, .header__link-food nav a .black, .header__link-bath nav a .black, .header__link-access nav a .black, .header__link-news nav a .black {
-  color: #333333 !important;
-}
-.header__link-room nav a .white, .header__link-food nav a .white, .header__link-bath nav a .white, .header__link-access nav a .white, .header__link-news nav a .white {
-  color: #F5F5F3 !important;
-}
-.header__link-room nav a:hover, .header__link-food nav a:hover, .header__link-bath nav a:hover, .header__link-access nav a:hover, .header__link-news nav a:hover {
-  color: #666;
-}
-.header__link-room nav a.white:hover, .header__link-food nav a.white:hover, .header__link-bath nav a.white:hover, .header__link-access nav a.white:hover, .header__link-news nav a.white:hover {
+.header__link p a:hover.white {
   color: #bbbbbb;
-}
-.header__link-room nav a::after, .header__link-food nav a::after, .header__link-bath nav a::after, .header__link-access nav a::after, .header__link-news nav a::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  background-color: #333333;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  opacity: 0;
-}
-.header__link-room nav a:hover::after, .header__link-food nav a:hover::after, .header__link-bath nav a:hover::after, .header__link-access nav a:hover::after, .header__link-news nav a:hover::after {
-  width: 30px;
-  opacity: 1;
-}
-.header__link-room nav a.white::after, .header__link-food nav a.white::after, .header__link-bath nav a.white::after, .header__link-access nav a.white::after, .header__link-news nav a.white::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  background-color: #F5F5F3;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  opacity: 0;
-}
-.header__link-room nav a.white:hover::after, .header__link-food nav a.white:hover::after, .header__link-bath nav a.white:hover::after, .header__link-access nav a.white:hover::after, .header__link-news nav a.white:hover::after {
-  width: 30px;
-  opacity: 1;
-}
-.header__link-room nav a.black::after, .header__link-food nav a.black::after, .header__link-bath nav a.black::after, .header__link-access nav a.black::after, .header__link-news nav a.black::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  background-color: #333333;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  opacity: 0;
-}
-.header__link-room nav a.black:hover::after, .header__link-food nav a.black:hover::after, .header__link-bath nav a.black:hover::after, .header__link-access nav a.black:hover::after, .header__link-news nav a.black:hover::after {
-  width: 30px;
-  opacity: 1;
-}
-.header__link-room p, .header__link-food p, .header__link-bath p, .header__link-access p, .header__link-news p {
-  text-align: center;
-  margin: 80px 0 80px;
-}
-@media screen and (max-width: 480px) {
-  .header__link-room p, .header__link-food p, .header__link-bath p, .header__link-access p, .header__link-news p {
-    display: none;
-  }
-}
-.header__link-room p a, .header__link-food p a, .header__link-bath p a, .header__link-access p a, .header__link-news p a {
-  color: #333333;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-  display: inline-block;
-}
-.header__link-room p a .black, .header__link-food p a .black, .header__link-bath p a .black, .header__link-access p a .black, .header__link-news p a .black {
-  color: #333333;
-}
-.header__link-room p a .white, .header__link-food p a .white, .header__link-bath p a .white, .header__link-access p a .white, .header__link-news p a .white {
-  color: #F5F5F3;
-}
-.header__link-room p a:hover, .header__link-food p a:hover, .header__link-bath p a:hover, .header__link-access p a:hover, .header__link-news p a:hover {
-  color: #666;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.header__link-room p a.white:hover, .header__link-food p a.white:hover, .header__link-bath p a.white:hover, .header__link-access p a.white:hover, .header__link-news p a.white:hover {
-  color: #bbbbbb;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.header__link-room .white, .header__link-food .white, .header__link-bath .white, .header__link-access .white, .header__link-news .white {
-  color: #F5F5F3;
-}
-.header__link-room .black, .header__link-food .black, .header__link-bath .black, .header__link-access .black, .header__link-news .black {
-  color: #333333;
-}
-.header__link-hotel_guide {
-  width: 200px;
-  height: 100vh;
-  position: fixed;
-  top: 70px;
-  right: 0;
-  color: #333333;
-  z-index: 10;
-}
-@media screen and (max-width: 480px) {
-  .header__link-hotel_guide {
-    width: 70px;
-  }
-}
-.header__link-hotel_guide h1 {
-  padding: 80px 20px;
-  text-align: center;
-}
-.header__link-hotel_guide h1:hover {
-  color: #666;
-}
-@media screen and (max-width: 480px) {
-  .header__link-hotel_guide h1 {
-    padding: 20px 10px;
-  }
-}
-.header__link-hotel_guide nav {
-  padding: 50px 20px;
-}
-@media screen and (max-width: 480px) {
-  .header__link-hotel_guide nav {
-    display: none;
-  }
-}
-.header__link-hotel_guide nav ul li {
-  text-align: center;
-  padding-top: 30px;
-}
-.header__link-hotel_guide nav a {
-  color: inherit;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-  position: relative;
-  cursor: pointer;
-}
-.header__link-hotel_guide nav a:hover {
-  color: #666;
-}
-.header__link-hotel_guide nav a.white:hover {
-  color: #bbbbbb;
-}
-.header__link-hotel_guide nav a::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  background-color: #333333;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  opacity: 0;
-}
-.header__link-hotel_guide nav a:hover::after {
-  width: 30px;
-  opacity: 1;
-}
-.header__link-hotel_guide nav a.white::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  background-color: #F5F5F3;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  opacity: 0;
-}
-.header__link-hotel_guide nav a.white:hover::after {
-  width: 30px;
-  opacity: 1;
-}
-.header__link-hotel_guide nav a.black::after {
-  content: "";
-  display: block;
-  width: 0px;
-  height: 1px;
-  position: absolute;
-  bottom: 5px;
-  left: 70px;
-  background-color: #333333;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
-  opacity: 0;
-}
-.header__link-hotel_guide nav a.black:hover::after {
-  width: 30px;
-  opacity: 1;
-}
-.header__link-hotel_guide p {
-  text-align: center;
-  padding: 80px 0 80px;
-  cursor: pointer;
-}
-@media screen and (max-width: 480px) {
-  .header__link-hotel_guide p {
-    display: none;
-  }
-}
-.header__link-hotel_guide p a {
-  color: #333333;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
-}
-.header__link-hotel_guide p a:hover {
-  color: #666;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.header__link-hotel_guide p a.white:hover {
-  color: #bbbbbb;
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-.header__link-hotel_guide .white {
-  color: #F5F5F3;
-}
-.header__link-hotel_guide .black {
-  color: #333333;
 }
 .header__mainvisual--img img {
   width: 100vw;
@@ -1560,6 +1107,8 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  position: relative;
+  z-index: 100;
 }
 @media screen and (max-width: 480px) {
   .main__news--list {

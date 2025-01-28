@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // 画像の要素を取得
-  const mainVisualImg = $('.header__mainvisual--img img');
+  const mainVisualImg = $('[class^="header__mainvisual--img"] img');
   const roomImg = $('.main__room--img img');
   const bathImg = $('.main__bath--img img');
   const foodImg = $('.main__food--img img');
@@ -27,34 +27,19 @@ $(document).ready(function () {
     links.each(function () {
       const linkTop = $(this).offset().top;
 
-      if (linkTop > mainVisualImgTop && linkTop < mainVisualImgBottom) {
-        // mainVisualImgと重なっている場合 → 白
+      if (
+        (linkTop > mainVisualImgTop && linkTop < mainVisualImgBottom) ||// mainVisualImgと重なっている場合 → 白
+        (linkTop > roomImgTop && linkTop < roomImgBottom) ||// roomImgと重なっている場合 → 白
+        (linkTop > bathImgTop && linkTop < bathImgBottom) ||// bathImgと重なっている場合 → 白
+        (linkTop > foodImgTop && linkTop < foodImgBottom) ||// foodImgと重なっている場合 → 白
+        (linkTop > footerTop && linkTop < footerBottom)// footerと重なっている場合 → 白
+      ) {
         $(this).removeClass('black').addClass('white');
       } else {
         $(this).removeClass('white').addClass('black');
       }
+    }); 
 
-      if (linkTop > roomImgTop && linkTop < roomImgBottom) {
-        // roomImgと重なっている場合 → 白
-        $(this).removeClass('black').addClass('white');
-      }
-
-      if (linkTop > bathImgTop && linkTop < bathImgBottom) {
-        // bathImgと重なっている場合 → 白
-        $(this).removeClass('black').addClass('white');
-      }
-
-      if (linkTop > foodImgTop && linkTop < foodImgBottom) {
-        // foodImgと重なっている場合 → 白
-        $(this).removeClass('black').addClass('white');
-      }
-
-      if (linkTop > footerTop && linkTop < footerBottom) {
-        // footerと重なっている場合 → 白
-        $(this).removeClass('black').addClass('white');
-      }
-
-    });
 
     /***********************************************
      * ハンバーガーメニューの文字色変更

@@ -272,6 +272,8 @@
         &--list {
             display: flex;
             justify-content: space-around;
+            position: relative;
+            z-index: 100;
 
             @include sp {
                 display: block;

@@ -51,26 +51,21 @@
         position: fixed;
         top: 0;
         right: 80px;
-        color: #333333;
         z-index: 1000;
         cursor: pointer;
-
 
         @include sp {
             right: 10px;
         }
 
-
-        span.white {
+        span {
             display: block;
             position: absolute;
             height: 2px;
             width: 70%;
-            background: #F5F5F3;
             border-radius: 5px;
             left: 15%;
             transition: all 0.4s ease;
-            // box-shadow: 0 1px 6px(#333333);
 
             &:nth-of-type(1) {
                 top: 13px;
@@ -85,188 +80,40 @@
             }
         }
 
+        span.white {
+            background: #F5F5F3;
+        }
+
         span.black {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 70%;
             background: #333333;
-            border-radius: 5px;
-            left: 15%;
-            transition: all 0.4s ease;
-            // box-shadow: 0 1px 6px(#333333);
 
-            &:nth-of-type(1) {
-                top: 13px;
-            }
-
-            &:nth-of-type(2) {
-                top: 22px;
-            }
-
-            &:nth-of-type(3) {
-                top: 31px;
-            }
-
-            .white {
-                background-color: #F5F5F3 !important;
-            }
+            // .white {
+            //     background-color: #F5F5F3 ;
+            // }
+            // .black {
+            //     background-color: #333333 ;
+            // }
         }
 
         &.active {
             span:nth-of-type(1) {
                 top: 22px;
-                /* 真ん中に移動 */
                 transform: rotate(-45deg);
-                /* 斜め左下に回転 */
                 background-color: #333333;
             }
 
             span:nth-of-type(2) {
                 opacity: 0;
-                /* 非表示にする */
             }
 
             span:nth-of-type(3) {
                 top: 22px;
-                /* 真ん中に移動 */
                 transform: rotate(45deg);
-                /* 斜め右下に回転 */
                 background-color: #333333;
             }
         }
-
-        &-room,
-        &-bath,
-        &-food {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
-            margin: 30px auto;
-            position: fixed;
-            top: 0;
-            right: 80px;
-            color: #333333;
-            z-index: 1000;
-            cursor: pointer;
-
-
-            @include sp {
-                right: 10px;
-            }
-
-            span {
-                display: block;
-                position: absolute;
-                height: 2px;
-                width: 70%;
-                background: #333333;
-                border-radius: 5px;
-                left: 15%;
-                transition: all 0.4s ease;
-
-                &:nth-of-type(1) {
-                    top: 13px;
-                }
-
-                &:nth-of-type(2) {
-                    top: 22px;
-                }
-
-                &:nth-of-type(3) {
-                    top: 31px;
-                }
-            }
-
-            &.active {
-                span:nth-of-type(1) {
-                    top: 22px;
-                    /* 真ん中に移動 */
-                    transform: rotate(-45deg);
-                    /* 斜め左下に回転 */
-                    background-color: #333333;
-                }
-
-                span:nth-of-type(2) {
-                    opacity: 0;
-                    /* 非表示にする */
-                }
-
-                span:nth-of-type(3) {
-                    top: 22px;
-                    /* 真ん中に移動 */
-                    transform: rotate(45deg);
-                    /* 斜め右下に回転 */
-                    background-color: #333333;
-                }
-            }
-        }
-
-        &-hotel_guide,
-        &-access,
-        &-news {
-            width: 50px;
-            height: 50px;
-            border-radius: 5px;
-            margin: 30px auto;
-            position: fixed;
-            top: 0;
-            right: 80px;
-            color: #0d0d0c;
-            z-index: 1000;
-            cursor: pointer;
-
-            @include sp {
-                right: 10px;
-            }
-
-            span {
-                display: block;
-                position: absolute;
-                height: 2px;
-                width: 70%;
-                background: #333333;
-                border-radius: 5px;
-                left: 15%;
-                transition: all 0.4s ease;
-
-                &:nth-of-type(1) {
-                    top: 13px;
-                }
-
-                &:nth-of-type(2) {
-                    top: 22px;
-                }
-
-                &:nth-of-type(3) {
-                    top: 31px;
-                }
-            }
-
-            &.active {
-                span:nth-of-type(1) {
-                    top: 22px;
-                    /* 真ん中に移動 */
-                    transform: rotate(-45deg);
-                    /* 斜め左下に回転 */
-                    background-color: #333333;
-                }
-
-                span:nth-of-type(2) {
-                    opacity: 0;
-                    /* 非表示にする */
-                }
-
-                span:nth-of-type(3) {
-                    top: 22px;
-                    /* 真ん中に移動 */
-                    transform: rotate(45deg);
-                    /* 斜め右下に回転 */
-                    background-color: #333333;
-                }
-            }
-        }
     }
+
 
     &__link {
         width: 200px;
@@ -274,21 +121,16 @@
         position: fixed;
         top: 70px;
         right: 0;
-        color: #F5F5F3;
+        // color: #F5F5F3; // デフォルト色
         z-index: 10;
-
-        .black {
-            color: #333333;
-        }
 
         .white {
             color: #F5F5F3;
         }
 
-        a {
-            color: #F5F5F3;
+        .black {
+            color: #333333;
         }
-
 
         @include sp {
             width: 70px;
@@ -298,18 +140,17 @@
             padding: 60px 20px;
             text-align: center;
 
-            a {
-                transition: color 0.3s;
+            &:hover {
+                color: #666;
             }
 
             @include sp {
                 padding: 20px 10px;
             }
-
         }
 
         nav {
-            padding: 40px 20px;
+            padding: 30px 20px;
 
             @include sp {
                 display: none;
@@ -322,7 +163,7 @@
 
             a {
                 color: inherit;
-                transition: color 0.3s ease;
+                transition: color 0.3s;
                 position: relative;
                 cursor: pointer;
 
@@ -334,7 +175,7 @@
                     position: absolute;
                     bottom: 5px;
                     left: 70px;
-                    background-color: #F5F5F3;
+                    background-color: currentColor; // 親の色を継承
                     transition: width 0.3s ease;
                     opacity: 0;
                 }
@@ -342,415 +183,39 @@
                 &:hover::after {
                     width: 30px;
                     opacity: 1;
-
                 }
 
-                &.white {
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 0px;
-                        height: 1px;
-                        position: absolute;
-                        bottom: 5px;
-                        left: 70px;
-                        background-color: #F5F5F3;
-                        transition: width 0.3s ease;
-                        opacity: 0;
-                    }
+                &:hover {
+                    color: #666;
 
-                    &:hover::after {
-                        width: 30px;
-                        opacity: 1;
-
+                    &.white {
+                        color: #bbbbbb;
                     }
                 }
-
-                &.black {
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 0px;
-                        height: 1px;
-                        position: absolute;
-                        bottom: 5px;
-                        left: 70px;
-                        background-color: #333333;
-                        transition: width 0.3s ease;
-                        opacity: 0;
-                    }
-
-                    &:hover::after {
-                        width: 30px;
-                        opacity: 1;
-
-                    }
-                }
-
             }
         }
 
         p {
             text-align: center;
-            margin: 80px 0 80px;
-
-            &:hover {
-                color: #666;
-                transform: scale(1.2);
-            }
-
+            margin: 80px 0;
+            cursor: pointer;
 
             @include sp {
                 display: none;
             }
 
             a {
-                color: #F5F5F3;
+                color: inherit;
                 transition: transform 0.3s ease;
-                display: inline-block;
 
                 &:hover {
+                    color: #666;
                     transform: scale(1.2);
-                }
-            }
-
-        }
-
-
-
-
-        &-room,
-        &-food,
-        &-bath,
-        &-access,
-        &-news {
-            width: 200px;
-            height: 100vh;
-            position: fixed;
-            top: 70px;
-            right: 0;
-            z-index: 10;
-            color: #333333;
-
-            @include sp {
-                width: 70px;
-            }
-
-            h1 {
-                padding: 80px 20px;
-                text-align: center;
-
-                &:hover {
-                    color: #666;
-                }
-
-                @include sp {
-                    padding: 20px 10px;
-                }
-            }
-
-            nav {
-                padding: 50px 20px;
-
-                @include sp {
-                    display: none;
-                }
-
-                ul li {
-                    text-align: center;
-                    padding-top: 30px;
-                }
-
-                a {
-                    // color: inherit;
-                    transition: color 0.3s;
-                    position: relative;
-                    cursor: pointer;
-
-                    .black {
-                        color: #333333 !important;
-                    }
-
-                    .white {
-                        color: #F5F5F3 !important;
-                    }
-
-                    &:hover {
-                        color: #666;
-                    }
 
                     &.white {
-                        &:hover {
-                            color: #bbbbbb;
-                        }
-                    }
-
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 0px;
-                        height: 1px;
-                        position: absolute;
-                        bottom: 5px;
-                        left: 70px;
-                        background-color: #333333;
-                        transition: width 0.3s ease;
-                        opacity: 0;
-                    }
-
-                    &:hover::after {
-                        width: 30px;
-                        opacity: 1;
-
-                    }
-
-                    &.white {
-                        &::after {
-                            content: "";
-                            display: block;
-                            width: 0px;
-                            height: 1px;
-                            position: absolute;
-                            bottom: 5px;
-                            left: 70px;
-                            background-color: #F5F5F3;
-                            transition: width 0.3s ease;
-                            opacity: 0;
-                        }
-
-                        &:hover::after {
-                            width: 30px;
-                            opacity: 1;
-
-                        }
-                    }
-
-                    &.black {
-                        &::after {
-                            content: "";
-                            display: block;
-                            width: 0px;
-                            height: 1px;
-                            position: absolute;
-                            bottom: 5px;
-                            left: 70px;
-                            background-color: #333333;
-                            transition: width 0.3s ease;
-                            opacity: 0;
-                        }
-
-                        &:hover::after {
-                            width: 30px;
-                            opacity: 1;
-
-                        }
+                        color: #bbbbbb;
                     }
                 }
-            }
-
-            p {
-                text-align: center;
-                margin: 80px 0 80px;
-
-                @include sp {
-                    display: none;
-                }
-
-                a {
-                    color: #333333;
-                    transition: transform 0.3s ease;
-                    display: inline-block;
-
-                    .black {
-                        color: #333333;
-                    }
-
-                    .white {
-                        color: #F5F5F3;
-                    }
-
-                    &:hover {
-                        color: #666;
-                        transform: scale(1.2);
-                    }
-
-                    &.white {
-                        &:hover {
-                            color: #bbbbbb;
-                            transform: scale(1.2);
-                        }
-                    }
-
-
-                }
-
-            }
-
-            .white {
-                color: #F5F5F3;
-            }
-
-            .black {
-                color: #333333;
-            }
-        }
-
-
-        &-hotel_guide {
-            width: 200px;
-            height: 100vh;
-            position: fixed;
-            top: 70px;
-            right: 0;
-            color: #333333;
-            z-index: 10;
-
-            @include sp {
-                width: 70px;
-            }
-
-
-            h1 {
-                padding: 80px 20px;
-                text-align: center;
-
-                &:hover {
-                    color: #666;
-                }
-
-
-                @include sp {
-                    padding: 20px 10px;
-                }
-            }
-
-            nav {
-                padding: 50px 20px;
-
-                @include sp {
-                    display: none;
-                }
-
-                ul li {
-                    text-align: center;
-                    padding-top: 30px;
-                }
-
-                a {
-                    color: inherit;
-                    transition: color 0.3s;
-                    position: relative;
-                    cursor: pointer;
-
-                    &:hover {
-                        color: #666;
-                    }
-
-                    &.white {
-                        &:hover {
-                            color: #bbbbbb;
-                        }
-                    }
-
-
-                    &::after {
-                        content: "";
-                        display: block;
-                        width: 0px;
-                        height: 1px;
-                        position: absolute;
-                        bottom: 5px;
-                        left: 70px;
-                        background-color: #333333;
-                        transition: width 0.3s ease;
-                        opacity: 0;
-                    }
-
-                    &:hover::after {
-                        width: 30px;
-                        opacity: 1;
-
-                    }
-
-                    &.white {
-                        &::after {
-                            content: "";
-                            display: block;
-                            width: 0px;
-                            height: 1px;
-                            position: absolute;
-                            bottom: 5px;
-                            left: 70px;
-                            background-color: #F5F5F3;
-                            transition: width 0.3s ease;
-                            opacity: 0;
-                        }
-
-                        &:hover::after {
-                            width: 30px;
-                            opacity: 1;
-
-                        }
-                    }
-
-                    &.black {
-                        &::after {
-                            content: "";
-                            display: block;
-                            width: 0px;
-                            height: 1px;
-                            position: absolute;
-                            bottom: 5px;
-                            left: 70px;
-                            background-color: #333333;
-                            transition: width 0.3s ease;
-                            opacity: 0;
-                        }
-
-                        &:hover::after {
-                            width: 30px;
-                            opacity: 1;
-
-                        }
-                    }
-                }
-            }
-
-            p {
-                text-align: center;
-                padding: 80px 0 80px;
-                cursor: pointer;
-
-                @include sp {
-                    display: none;
-                }
-
-                a {
-                    color: #333333;
-                    transition: transform 0.3s ease;
-
-                    &:hover {
-                        color: #666;
-                        transform: scale(1.2);
-                    }
-
-                    &.white {
-                        &:hover {
-                            color: #bbbbbb;
-                            transform: scale(1.2);
-                        }
-                    }
-                }
-
-            }
-
-            .white {
-                color: #F5F5F3;
-            }
-
-            .black {
-                color: #333333;
             }
         }
     }
