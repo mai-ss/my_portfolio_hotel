@@ -1,140 +1,47 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php get_header('single-room'); ?>
 
-<head>
-    <meta charset="utf-8">
-    <title>光華亭</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/main.css">
-
-</head>
-
-<body>
-    <header class="header">
-        <div class="header__menu-room">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="header__link-room" id="__background-check">
-            <h1>
-                <a href="index.html">光華亭</a>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
-                    <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
-                    <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
-                    <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
-                    <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
-                </ul>
-            </nav>
-            <p>
-                <a href="">予約</a>
-            </p>
-        </div>
-        <div class="header__mainvisual--img-room" data-default-img="room_02">
-            <img src="img/room_02.jpg" alt="mainvisual" data-id="room_02">
-            <img src="img/room_05.jpg" alt="mainvisual" data-id="room_05" style="display: none;">
-            <img src="img/room_06.jpg" alt="mainvisual" data-id="room_06" style="display: none;">
-            <img src="img/room_07.jpg" alt="mainvisual" data-id="room_07" style="display: none;">
-        </div>
-        <div class="header__mainvisual--img-select">
-            <img src="img/room_05.jpg" alt="room" data-img="room_05">
-            <img src="img/room_06.jpg" alt="room" data-img="room_06">
-            <img src="img/room_07.jpg" alt="room" data-img="room_07">
-        </div>
-        <div class="header__side" id="__remove-transition">
-            <div class="header__side--img">
-                <img src="img/mv_01.jpg" alt="トップ画像" id="top-image">
-                <img src="img/mv_02.jpg" alt="お部屋" data-id="room1">
-                <img src="img/mv_03.jpg" alt="お風呂" data-id="bath">
-                <img src="img/mv_04.jpg" alt="お料理" data-id="food">
-                <img src="img/mv_05.jpg" alt="館内紹介" data-id="hotel_guide">
-                <img src="img/mv_06.jpg" alt="アクセス" data-id="access">
-            </div>
-            <div class="header__side--menu">
-                <div class="header__side--link">
-                    <h1>
-                        光華亭
-                    </h1>
-                    <nav>
-                        <ul>
-                            <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
-                            <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
-                            <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
-                            <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
-                            <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
-                        </ul>
-                    </nav>
-                    <div class="header__side--reservation">
-                        <a href="">ご予約はこちら</a>
-                    </div>
-                    <address class="header__side--address">
-                        <p>〒390-1521 長野県松本市美ヶ原高原1234-5<br>
-                            TEL:0263-87-0011 / FAX:0263-87-0012</p>
-                    </address>
+<main class="room-main">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <section class="room-main__concept">
+                <h2 class="room-main__concept--title"><?php the_title(); ?></h2>
+                <p class="room-main__concept--text"><?php the_content(); ?></p>
+                <div class="room-main__room-list--item--menu--reservation">
+                    <a href="<?php echo get_post_meta(get_the_ID(), 'reservation_link', true); ?>">この部屋を予約する</a>
                 </div>
-            </div>
-        </div>
-    </header>
-    <main class="room-main">
-        <section class="room-main__concept">
-            <h2 class="room-main__concept--title">朝霧スタンダードルーム</h2>
-            <p class="room-main__concept--text">光華亭の基本となるお部屋でありながら、落ち着きと温もりを兼ね備えた空間。<br>
-                清々しい朝の光が差し込むシンプルで心地よい設計が特徴です。</p>
-            <div class="room-main__room-list--item--menu--reservation">
-                <a href="">この部屋を予約する</a>
-            </div>
-        </section>
-        <section class="room-main__details">
-            <h3>お部屋の概要</h3>
-            <table class="room-main__details--table">
-                <tr>
-                    <th>客室タイプ</th>
-                    <td>朝霧スタンダードルーム</td>
-                </tr>
-                <tr>
-                    <th>間取り</th>
-                    <td>和洋室（和室10畳、洋室8畳）</td>
-                </tr>
-                <tr>
-                    <th>定員</th>
-                    <td>2～8名</td>
-                </tr>
-                <tr>
-                    <th>客室内設備</th>
-                    <td>
-                        冷暖房/ツインベッド（和洋室）※2/開閉式露天風呂・シャワー/テラス/洗面所/洋式トイレ（ウォシュレット）/
-                        金庫/ドライヤー/冷蔵庫※3/湯沸しポット/お茶セット/32インチ液晶テレビ/衛星放送/インターネット接続（無線LAN）
-                    </td>
-                </tr>
-                <tr>
-                    <th>アメニティ</th>
-                    <td>
-                        シャンプー・リンス/ボディソープ/タオル・バスタオル※4/ハミガキセット/ドライヤー/浴衣
-                    </td>
-                </tr>
-                <tr>
-                    <th>お煙草</th>
-                    <td>お部屋は全室禁煙です。テラスでのみ喫煙できます。</td>
-                </tr>
-            </table>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer__container">
-            <h2>光華亭</h2>
-            <p>〒390-1521 長野県松本市美ヶ原高原1234-5</p>
-            <p>TEL:0123-45-6789/ FAX:0123-45-6788</p>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/menu-btn.js"></script>
-    <script src="js/hover-image.js"></script>
-    <script src="js/footer-background-check.js"></script>
-</body>
+            </section>
+
+            <section class="room-main__details">
+                <h3>お部屋の概要</h3>
+                <table class="room-main__details--table">
+                    <tr>
+                        <th>客室タイプ</th>
+                        <td><?php echo get_post_meta(get_the_ID(), 'room_type', true); ?></td>
+                    </tr>
+                    <tr>
+                        <th>間取り</th>
+                        <td><?php echo get_post_meta(get_the_ID(), 'layout', true); ?></td>
+                    </tr>
+                    <tr>
+                        <th>定員</th>
+                        <td><?php echo get_post_meta(get_the_ID(), 'capacity', true); ?></td>
+                    </tr>
+                    <tr>
+                        <th>客室内設備</th>
+                        <td><?php echo get_post_meta(get_the_ID(), 'facilities', true); ?></td>
+                    </tr>
+                    <tr>
+                        <th>アメニティ</th>
+                        <td><?php echo get_post_meta(get_the_ID(), 'amenities', true); ?></td>
+                    </tr>
+                    <tr>
+                        <th>お煙草</th>
+                        <td><?php echo get_post_meta(get_the_ID(), 'smoking', true); ?></td>
+                    </tr>
+                </table>
+            </section>
+
+    <?php endwhile;
+    endif; ?>
+</main>
+
+<?php get_footer(); ?>

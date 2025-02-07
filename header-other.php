@@ -7,35 +7,56 @@
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
+
 </head>
 
 <body>
     <header class="header">
         <div class="header__menu">
-            <span class="white"></span>
-            <span class="white"></span>
-            <span class="white"></span>
+            <span class="black"></span>
+            <span class="black"></span>
+            <span class="black"></span>
         </div>
-        <div class="header__link" class="white">
+        <div class="header__link" id="__background-check">
             <h1>
-                <a class="white" href="<?php echo esc_url(home_url()); ?>">光華亭</a>
+                <a href="<?php echo esc_url(home_url()); ?>">光華亭</a>
             </h1>
             <nav>
                 <ul>
-                    <li><a id="__room1" class="white" href="<?php echo esc_url(get_permalink(get_page_by_path('room'))); ?>">お部屋</a></li>
-                    <li><a id="__bath" class="white" href="<?php echo esc_url(get_permalink(get_page_by_path('bath'))); ?>">お風呂</a></li>
-                    <li><a id="__food" class="white" href="<?php echo esc_url(get_permalink(get_page_by_path('food'))); ?>">お料理</a></li>
-                    <li><a id="__hotel_guide" class="white" href="<?php echo esc_url(get_permalink(get_page_by_path('guide'))); ?>">館内紹介</a></li>
-                    <li><a id="__access" class="white" href="<?php echo esc_url(get_permalink(get_page_by_path('access'))); ?>">アクセス</a></li>
+                    <li><a id="__room1" href="<?php echo esc_url(get_permalink(get_page_by_path('room'))); ?>">お部屋</a></li>
+                    <li><a id="__bath" href="<?php echo esc_url(get_permalink(get_page_by_path('bath'))); ?>">お風呂</a></li>
+                    <li><a id="__food" href="<?php echo esc_url(get_permalink(get_page_by_path('food'))); ?>">お料理</a></li>
+                    <li><a id="__hotel_guide" href="<?php echo esc_url(get_permalink(get_page_by_path('guide'))); ?>">館内紹介</a></li>
+                    <li><a id="__access" href="<?php echo esc_url(get_permalink(get_page_by_path('access'))); ?>">アクセス</a></li>
                 </ul>
             </nav>
             <p>
-                <a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>" class="reservation-btn white">予約</a>
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>" class="reservation-btn">予約</a>
             </p>
         </div>
-        <div class="header__mainvisual--img">
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/img/mv_01.jpg'); ?>" alt="mainvisual">
-        </div>
+        <!-- お部屋 -->
+        <?php if (is_page('room')): ?>
+            <div class="header__mainvisual--img-room">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/room_01.jpg'); ?>" alt="mainvisual">
+            </div>
+        <!-- お料理 -->
+        <?php elseif (is_page('food')): ?>
+            <div class="header__mainvisual--img-food">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/food_01.jpg'); ?>" alt="food" data-id="food_01">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/food_02.jpg'); ?>" alt="food" data-id="food_02" style="display: none;">
+            </div>
+            <div class="header__mainvisual--img-select">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/food_01.jpg'); ?>" alt="food" data-img="food_01">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/food_02.jpg'); ?>" alt="food" data-img="food_02">
+            </div>
+        <!-- お風呂 -->
+        <?php elseif (is_page('bath')): ?>
+            <div class="header__mainvisual--img-bath">
+                <img src="<?php echo esc_url(get_template_directory_uri() . '/img/bath_01.jpg'); ?>" alt="bath">
+            </div>
+        <!-- 館内案内、アクセス、お知らせ(画像なし) -->
+        <?php else : ?>
+        <?php endif; ?>
 
         <div class="header__side" id="__remove-transition">
             <div class="header__side--img">
@@ -48,7 +69,9 @@
             </div>
             <div class="header__side--menu">
                 <div class="header__side--link">
-                    <h1>光華亭</h1>
+                    <h1>
+                        <a href="index.html">光華亭</a>
+                    </h1>
                     <nav>
                         <ul>
                             <li><a id="__room1" href="<?php echo esc_url(get_permalink(get_page_by_path('room'))); ?>" data-img="room1">お部屋</a></li>

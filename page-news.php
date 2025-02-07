@@ -1,121 +1,55 @@
-<!DOCTYPE html>
-<html lang="ja">
+<?php
+$news_query = new WP_Query([
+    'post_type' => 'news',
+    'posts_per_page' => -1,
+]);
+?>
 
-<head>
-    <meta charset="utf-8">
-    <title>光華亭</title>
-    <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="css/main.css">
+<?php get_header('other'); ?>
 
-</head>
+<main class="news">
+    <h3>お知らせ</h3>
+    <div class="news__filter">
+        <span>カテゴリー</span>
+        <?php
+        // カテゴリーのドロップダウンリスト
+        wp_dropdown_categories(array(
+            'show_option_all' => '全てを見る',
+            'name' => 'category',
+            'selected' => get_query_var('cat'),
+            'value_field' => 'term_id'
+        ));
+        ?>
+        <span>アーカイブ</span>
+        <?php
+        // 月別アーカイブのドロップダウンリスト
+        wp_get_archives(array(
+            'type' => 'monthly',
+            'format' => 'option',
+        ));
+        ?>
+    </div>
 
-<body>
-    <header class="header">
-        <div class="header__menu-news">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="header__link-news" id="__background-check">
-            <h1>
-                <a href="index.html">光華亭</a>
-            </h1>
-            <nav>
-                <ul>
-                    <li><a id="__room1" href="room1.html" data-img="room1">お部屋</a></li>
-                    <li><a id="__bath" href="bath.html" data-img="bath">お風呂</a></li>
-                    <li><a id="__food" href="food.html" data-img="food">お料理</a></li>
-                    <li><a id="__hotel_guide" href="hotel_guide.html" data-img="hotel_guide">館内紹介</a></li>
-                    <li><a id="__access" href="access.html" data-img="access">アクセス</a></li>
-                </ul>
-            </nav>
-            <p>
-                <a href="">予約</a>
-            </p>
-        </div>
-        <div class="header__side" id="__remove-transition">
-            <div class="header__side--img">
-                <img src="img/mv_02.jpg" alt="お部屋">
-            </div>
-            <div class="header__side--menu">
-                <div class="header__side--link">
-                    <h1>光華亭</h1>
-                    <nav>
-                        <ul>
-                            <li><a href="room1.html">お部屋</a></li>
-                            <li><a href="bath.html">お風呂</a></li>
-                            <li><a href="food.html">お料理</a></li>
-                            <li><a href="hotel_guide.html">館内紹介</a></li>
-                            <li><a href="access.html">アクセス</a></li>
-                        </ul>
-                    </nav>
-                    <div class="header__side--reservation">
-                        <a href="">ご予約はこちら</a>
-                    </div>
-                    <address class="header__side--address">
-                        <p>〒390-1521 長野県松本市美ヶ原高原1234-5<br>
-                            TEL:0263-87-0011 / FAX:0263-87-0012</p>
-                    </address>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main class="news">
-        <h3>お知らせ</h3>
-        <div class="news__filter">
-            <span>カテゴリー</span>
-            <select class="news__filter-select">
-                <option value="" selected>カテゴリーを選択</option>
-                <option value="news.html">全てを見る</option>
-                <option value="news-detail.html">お知らせ</option>
-            </select>
-            <span>アーカイブ</span>
-            <select class="news__filter-label">
-                <option value="" selected>月を選択</option>
-                <option value="">2024.10</option>
-                <option value="">2024.6</option>
-                <option value="">2024.5</option>
-            </select>
-        </div>
+    <!-- 投稿（お知らせ）を表示 -->
+    <?php if ($news_query->have_posts()) : ?>
         <ul class="news-list">
-            <li class="news-list__item">
-                <a href="" class="news-list__link">
-                    <p class="news-list__date">2024.10.1</p>
-                    <h4 class="news-list__title">年末年始の営業について</h4>
-                    <p class="news-list__excerpt">年末年始は下記のスケジュールで営業いたします...</p>
-                </a>
-            </li>
-            <li class="news-list__item">
-                <a href="" class="news-list__link">
-                    <p class="news-list__date">2024.6.10</p>
-                    <h4 class="news-list__title">大浴場改修工事のお知らせ</h4>
-                    <p class="news-list__excerpt">平素より「光華亭」をご愛顧いただき、誠にありがとうございます。この度、より快適にご利用いただ...</p>
-                </a>
-            </li>
-            <li class="news-list__item">
-                <a href="" class="news-list__link">
-                    <p class="news-list__date">2024.5.10</p>
-                    <h4 class="news-list__title">Webサイトリニューアルのお知らせ</h4>
-                    <p class="news-list__excerpt">平素より「光華亭」をご愛顧いただき、誠にありがとうございます。この度、当館のWebサイトを......</p>
-                </a>
-            </li>
+            <?php while ($news_query->have_posts()) : $news_query->the_post(); ?>
+                <?php 
+                $content = get_the_content(); 
+                $sentence = wp_trim_words($content, 70, '...');
+                ?>
+                <li class="news-list__item">
+                    <a href="<?php the_permalink(); ?>" class="news-list__link">
+                        <p class="news-list__date"><?php echo get_the_date('Y年m月d日'); ?></p>
+                        <h4 class="news-list__title"><?php the_title(); ?></h4>
+                        <p class="news-list__excerpt"><?php echo $sentence; ?></p>
+                    </a>
+                </li>
+            <?php endwhile; ?>
         </ul>
-    </main>
-    <footer class="footer">
-        <div class="footer__container">
-            <h2>光華亭</h2>
-            <p>〒390-1521 長野県松本市美ヶ原高原1234-5</p>
-            <p>TEL:0123-45-6789/ FAX:0123-45-6788</p>
-        </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="js/menu-btn.js"></script>
-    <script src="js/hover-image.js"></script>
-    <script src="js/scroll.js"></script>
-    <script src="js/footer-background-check.js"></script>
-</body>
+    <?php else : ?>
+        <p>お知らせはありません。</p>
+    <?php endif; ?>
+</main>
+
+<?php get_footer(); ?>
