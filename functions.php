@@ -3,7 +3,7 @@ add_action('wp_enqueue_scripts', 'add_styles');
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 add_action('init', 'create_room_post_type');
 add_action('init', 'create_news_post_type');
-add_theme_support('post-thumbnails', array('room', 'news'));
+add_theme_support('post-thumbnails');
 
 function add_styles()
 {
@@ -115,3 +115,10 @@ function create_news_post_type() {
         )
     );
 }
+
+// // プラグイン Search & Filter
+// function add_news_filter() {
+//     if (is_post_type_archive('news')) {
+//         echo do_shortcode('[searchandfilter fields="news_category"]');
+//     }
+// }
