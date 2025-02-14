@@ -30,7 +30,7 @@
             <p>どうぞ、自慢のお風呂をお好きな時間に、ゆったりと存分にお楽しみください。</p>
         </div>
         <div class="bath-main__private--reservation">
-        <a href="<?php echo esc_url(home_url('/reservation')); ?>" class="main__reservation--link">ご予約はこちら</a>
+        <a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>" class="main__reservation--link">ご予約はこちら</a>
         </div>
     </section>
 </main>

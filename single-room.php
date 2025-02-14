@@ -6,7 +6,7 @@
                 <h2 class="room-main__concept--title"><?php the_title(); ?></h2>
                 <p class="room-main__concept--text"><?php the_content(); ?></p>
                 <div class="room-main__room-list--item--menu--reservation">
-                    <a href="<?php echo get_post_meta(get_the_ID(), 'reservation_link', true); ?>">この部屋を予約する</a>
+                    <a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>">この部屋を予約する</a>
                 </div>
             </section>
 

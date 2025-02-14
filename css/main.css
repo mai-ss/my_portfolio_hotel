@@ -751,6 +751,34 @@
   width: 100%;
 }
 
+/********************************************
+        予約ページ  page-reservation.php
+********************************************/
+.reservation__section {
+  max-width: 1700px;
+  margin: 0px 200px 150px 50px;
+  background-color: #F5F5F3;
+}
+@media screen and (max-width: 860px) {
+  .reservation__section {
+    max-width: 600px;
+    margin: 40px 200px 40px 30px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .reservation__section {
+    max-width: 400px;
+    margin: 40px 70px 40px 20px;
+  }
+}
+.reservation__title {
+  padding: 15px 0;
+}
+
+.booking-package {
+  height: 80vh;
+}
+
 .header.open .header__side {
   opacity: 1;
 }

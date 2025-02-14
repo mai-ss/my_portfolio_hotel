@@ -23,23 +23,24 @@
         }
 
         &--title {
-            color:#333333;
+            color: #333333;
             letter-spacing: 2px;
             margin: 15px 0 0;
 
         }
-            &--text {
-                line-height: 30px;
-                margin: 20px 0 60px;
-                padding: 20px 0;
 
-                @include tab {
-                    margin: 0;
-                }
+        &--text {
+            line-height: 30px;
+            margin: 20px 0 60px;
+            padding: 20px 0;
+
+            @include tab {
+                margin: 0;
             }
-
         }
-    
+
+    }
+
 
     &__link {
 
@@ -619,6 +620,8 @@
     }
 }
 
+
+
 /********************************************
     サンクスページ(thanks-page.html)
 ********************************************/
@@ -668,4 +671,33 @@
 
 
     }
+}
+
+/********************************************
+        予約ページ  page-reservation.php
+********************************************/
+.reservation {
+    &__section {
+        max-width: 1700px;
+        margin: 0px 200px 150px 50px;
+        background-color: #F5F5F3;
+
+        @include tab {
+            max-width: 600px;
+            margin: 40px 200px 40px 30px;
+        }
+
+        @include sp {
+            max-width: 400px;
+            margin: 40px 70px 40px 20px;
+        }
+    }
+        &__title {
+            padding: 15px 0;
+        }
+
+}
+
+.booking-package {
+    height: 80vh;
 }

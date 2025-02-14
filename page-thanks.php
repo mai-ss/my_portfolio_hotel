@@ -6,9 +6,7 @@
     <title>光華亭</title>
     <meta name="description" content="テキストテキストテキストテキストテキストテキストテキストテキスト">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="../img/favicon.ico">
-    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <?php wp_head(); ?>
 
 </head>
 
@@ -22,7 +20,7 @@
     <main class="thanks">
       <section class="thanks__container">
         <p class="thanks__message">
-          「このたびは『光華亭』をご予約いただき、誠にありがとうございます。<br>
+          このたびは『光華亭』をご予約いただき、誠にありがとうございます。<br>
           ご予約を承りました。メールにて予約完了のご案内をお送りいたしますのでご確認ください。<br><br>
           詳細が確認できましたら、別途、予約確定メールをお送りします。<br>
           翌日になりましても完了メールが届かない場合は、お手数おかけしますが下記までご連絡をいただきますよう、よろしくお願い申し上げます。

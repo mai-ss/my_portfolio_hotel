@@ -54,7 +54,7 @@ $rooms = get_posts([
             <p class="main__reservation--phone">Tel.0123-45-6789</p>
             <p class="main__reservation--hours">受付時間： 9:00~ 19:00</p>
             <div class="main__reservation--button">
-                <a href="<?php echo esc_url(home_url('/reservation')); ?>" class="main__reservation--link">ご予約はこちら</a>
+                <a href="<?php echo esc_url(get_permalink(get_page_by_path('reservation'))); ?>" class="main__reservation--link">ご予約はこちら</a>
             </div>
         </div>
     </section>

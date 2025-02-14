@@ -57,7 +57,7 @@ function enqueue_custom_scripts()
         wp_enqueue_script('background-check', get_template_directory_uri() . '/js/background-check.js', array('jquery'), null, true);
     } 
     // アクセス、お風呂、お料理、館内案内、お知らせ、お部屋ページのみ
-    if (is_page(array('access', 'bath', 'food', 'guide', 'news', 'single-news', 'room'))) {
+    if (is_page(array('access', 'bath', 'food', 'guide', 'news', 'single-news', 'room','reservation'))) {
         wp_enqueue_script('footer-background-check', get_template_directory_uri() . '/js/footer-background-check.js', array('jquery'), null, true);
     }
 
