@@ -115,10 +115,3 @@ function create_news_post_type() {
         )
     );
 }
-
-// // プラグイン Search & Filter
-// function add_news_filter() {
-//     if (is_post_type_archive('news')) {
-//         echo do_shortcode('[searchandfilter fields="news_category"]');
-//     }
-// }
