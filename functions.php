@@ -4,6 +4,7 @@ add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 add_action('init', 'create_room_post_type');
 add_action('init', 'create_news_post_type');
 add_theme_support('post-thumbnails');
+add_action('pre_get_posts', 'filter_news_archive');
 
 function add_styles()
 {
@@ -114,4 +115,10 @@ function create_news_post_type() {
             ),
         )
     );
+}
+
+function filter_news_archive($query) {
+    if ($query->is_main_query() && !is_admin() && $query->is_date()) {
+        $query->set('post_type', 'news');
+    }
 }

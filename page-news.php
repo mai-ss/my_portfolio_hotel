@@ -19,10 +19,7 @@ $news_query = new WP_Query([
 
 <main class="news">
     <h3>お知らせ</h3>
-    <div class="news__filter">
-        <!-- 検索フィルター -->
-        <?php echo do_shortcode('[searchandfilter id="1" post_types="news" fields="news_category" types="select"]'); ?>
-        
+    <div class="news__filter">        
         <!-- カテゴリー選択セレクトボックス -->
         <span>カテゴリー</span>
         <form action="">
